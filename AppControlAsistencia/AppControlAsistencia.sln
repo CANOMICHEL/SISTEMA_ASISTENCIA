@@ -1,0 +1,34 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2013
+VisualStudioVersion = 12.0.21005.1
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AppControlAsistencia", "AppControlAsistencia\AppControlAsistencia.csproj", "{AF73BFEC-1236-4BE9-A966-8545879D0601}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LibClases", "LibClases\LibClases.csproj", "{6D5B3432-0A5E-4646-8665-55D505FF2DFE}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LibFormularios", "LibFormularios\LibFormularios.csproj", "{B3231F80-807F-495D-A457-DCAC6976CB0D}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{AF73BFEC-1236-4BE9-A966-8545879D0601}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AF73BFEC-1236-4BE9-A966-8545879D0601}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AF73BFEC-1236-4BE9-A966-8545879D0601}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AF73BFEC-1236-4BE9-A966-8545879D0601}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6D5B3432-0A5E-4646-8665-55D505FF2DFE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6D5B3432-0A5E-4646-8665-55D505FF2DFE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6D5B3432-0A5E-4646-8665-55D505FF2DFE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6D5B3432-0A5E-4646-8665-55D505FF2DFE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B3231F80-807F-495D-A457-DCAC6976CB0D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B3231F80-807F-495D-A457-DCAC6976CB0D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B3231F80-807F-495D-A457-DCAC6976CB0D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B3231F80-807F-495D-A457-DCAC6976CB0D}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
