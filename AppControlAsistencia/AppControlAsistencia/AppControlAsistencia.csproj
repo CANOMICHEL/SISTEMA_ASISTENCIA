@@ -44,6 +44,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="frmControlUsuario.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmControlUsuario.Designer.cs">
+      <DependentUpon>frmControlUsuario.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmIngresoDatos.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -58,6 +64,9 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="frmControlUsuario.resx">
+      <DependentUpon>frmControlUsuario.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmIngresoDatos.resx">
       <DependentUpon>frmIngresoDatos.cs</DependentUpon>
     </EmbeddedResource>
