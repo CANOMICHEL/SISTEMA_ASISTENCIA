@@ -422,66 +422,57 @@ end
 go
 
 
-/*
+
 
 --======================================================================================
---================================ TASISTENCIA =========================================
+--================================ TASISTENCIAALUMNO =========================================
 --======================================================================================
 -- SPU Insertar Asistencia
 if exists (select * from dbo.sysobjects where name = 'spuTAsistenciaAlumno_Insertar')
 	drop procedure spuTAsistenciaAlumno_Insertar
 go
 create procedure spuTAsistenciaAlumno_Insertar
-	@CodAsistenciaAlumno varchar (50),	
-	@AñoCurricular varchar(8),
-	@CodAlumno varchar(8),
 	@Fecha DateTime,
+	@CodAlumno varchar(8),
+	@AñoCurricular varchar(8),
 	@Estado varchar(8),
 	@Observacion varchar (50)
 as
 begin
 	-- Validacion del año curricular
-	if (@CodAsistenciaAlumno != '' and not exists (select * from TMatricula where AñoCurricular = @AñoCurricular and CodAlumno = @CodAlumno))
+	if (@Fecha != '' and not exists (select * from TAsistenciaAlumno where day(Fecha) = day(@Fecha) and 
+	month(Fecha) = month(@Fecha) and year(Fecha) = year(@Fecha) and CodAlumno = @CodAlumno))
 	begin
 		-- Validar CodAlumno
 		if (@CodAlumno != '')
 		begin
 			-- Validar el Nombre
-			if (@CodGrado != '')
+			if (@AñoCurricular != '')
 			begin
 				-- Validad el Seccion
-				if (@Seccion != '')
+				if (@Estado != '')
 				begin
-					if (@Nivel != '')
-					begin
-						if (@CodDocente != '')
-						begin
 							-- Insertar nueva Matricula
 							insert into TAsistenciaAlumno
-							values(@AñoCurricular,@CodAlumno,@CodGrado,@Seccion,@Nivel,@CodDocente)
+							values(@Fecha,@CodAlumno,@AñoCurricular,@Estado,@Observacion)
 							-- COnfirmacion operacion
 							select CodError = 0, Mensaje = 'Registro insertado exitosamente'
-						end
-						else
-							select CodError = 1, Mensaje = 'El codigo del docente no puede estar vacío'
-					end
-					else
-						select CodError = 1, Mensaje = 'El campo nivel no puede estar vacío'
+
 				end
 				else
-					select CodError = 1, Mensaje = 'El campo seccion no puede estar vacío'
+					select CodError = 1, Mensaje = 'El campo estado no puede estar vacío'
 			end
 			else
-				select CodError = 1, Mensaje = 'El campo grado no puede estar vacío'
+				select CodError = 1, Mensaje = 'El campo año curricular no puede estar vacío'
 		end
 		else
 			select CodError = 1, Mensaje = 'El codigo del alumno no puede estar vacío'
 	end
 	else
-		select CodError = 1, Mensaje = 'El año curricular se encuentra en blanco o ya existe matrícula'
+		select CodError = 1, Mensaje = 'La fecha se encuentra en blanco o ya existe asistencia de alumno'
 end
 go
-
+/*
 -- SPU Actualizar Matricula
 if exists (select * from dbo.sysobjects where name = 'spuTMatricula_Actualizar')
 	drop procedure spuTMatricula_Actualizar
