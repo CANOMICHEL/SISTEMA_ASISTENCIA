@@ -326,13 +326,122 @@ create procedure spuTMatricula_Insertar
 	@AñoCurricular varchar(8),
 	@CodAlumno varchar(8),
 	@CodGrado varchar(8),
-	@Seccion varchar(20),
-	@Nivel varchar(8),
 	@CodDocente varchar(8)
 as
 begin
 	-- Validacion del año curricular
 	if (@AñoCurricular != '' and not exists (select * from TMatricula where AñoCurricular = @AñoCurricular and CodAlumno = @CodAlumno))
+	begin
+		-- Validar CodAlumno
+		if (@CodAlumno != '')
+		begin
+			-- Validar el Nombre
+			if (@CodGrado != '')
+			begin
+						if (@CodDocente != '')
+						begin
+							-- Insertar nueva Matricula
+							insert into TMatricula
+							values(@AñoCurricular,@CodAlumno,@CodGrado,@CodDocente)
+							-- COnfirmacion operacion
+							select CodError = 0, Mensaje = 'Registro insertado exitosamente'
+						end
+						else
+							select CodError = 1, Mensaje = 'El codigo del docente no puede estar vacío'
+					
+			end
+			else
+				select CodError = 1, Mensaje = 'El campo grado no puede estar vacío'
+		end
+		else
+			select CodError = 1, Mensaje = 'El codigo del alumno no puede estar vacío'
+	end
+	else
+		select CodError = 1, Mensaje = 'El año curricular se encuentra en blanco o ya existe matrícula'
+end
+go
+
+-- SPU Actualizar Matricula
+if exists (select * from dbo.sysobjects where name = 'spuTMatricula_Actualizar')
+	drop procedure spuTMatricula_Actualizar
+go
+create procedure spuTMatricula_Actualizar
+	@AñoCurricular varchar(8),
+	@CodAlumno varchar(8),
+	@CodGrado varchar(8),
+	@CodDocente varchar(8)
+as
+begin
+	-- Validacion del año curricular
+	if (@AñoCurricular != '' and exists (select * from TMatricula where AñoCurricular = @AñoCurricular and CodAlumno = @CodAlumno))
+	begin
+		-- Validar CodAlumno
+		if (@CodAlumno != '')
+		begin
+			-- Validar el Nombre
+			if (@CodGrado != '')
+			begin
+
+						if (@CodDocente != '')
+						begin
+							-- Insertar nuevo alumno
+							update TMatricula set 
+								CodGrado = @CodGrado,
+
+								CodDocente = @CodDocente
+								where AñoCurricular = @AñoCurricular and CodAlumno = @CodAlumno
+							-- Confirmacion operacion
+							select CodError = 0, Mensaje = 'Registro insertado exitosamente'
+						
+				end
+				else
+					select CodError = 1, Mensaje = 'El campo seccion no puede estar vacío'
+			end
+			else
+				select CodError = 1, Mensaje = 'El campo grado no puede estar vacío'
+		end
+		else
+			select CodError = 1, Mensaje = 'El codigo del alumno no puede estar vacío'
+	end
+	else
+		select CodError = 1, Mensaje = 'El año curricular se encuentra en blanco o no existe matrícula'
+end
+go
+
+
+
+-- SPU Listar Matricula
+if exists (select * from dbo.sysobjects where name = 'spuTMatricula_Listar')
+	drop procedure spuTMatricula_Listar
+go
+create procedure spuTMatricula_Listar
+as
+begin
+	select * from TMatricula
+end
+go
+
+
+/*
+
+--======================================================================================
+--================================ TASISTENCIA =========================================
+--======================================================================================
+-- SPU Insertar Asistencia
+if exists (select * from dbo.sysobjects where name = 'spuTAsistenciaAlumno_Insertar')
+	drop procedure spuTAsistenciaAlumno_Insertar
+go
+create procedure spuTAsistenciaAlumno_Insertar
+	@CodAsistenciaAlumno varchar (50),	
+	@AñoCurricular varchar(8),
+	@CodAlumno varchar(8),
+	@Fecha DateTime,
+	@Estado varchar(8),
+	@Observacion varchar (50)
+as
+begin
+	-- Validacion del año curricular
+	if (@CodAsistenciaAlumno != '' and not exists (select * from TMatricula where AñoCurricular = @AñoCurricular and CodAlumno = @CodAlumno))
 	begin
 		-- Validar CodAlumno
 		if (@CodAlumno != '')
@@ -348,7 +457,7 @@ begin
 						if (@CodDocente != '')
 						begin
 							-- Insertar nueva Matricula
-							insert into TMatricula
+							insert into TAsistenciaAlumno
 							values(@AñoCurricular,@CodAlumno,@CodGrado,@Seccion,@Nivel,@CodDocente)
 							-- COnfirmacion operacion
 							select CodError = 0, Mensaje = 'Registro insertado exitosamente'
@@ -444,10 +553,4 @@ begin
 	select * from TMatricula
 end
 go
-
-
-
-
---======================================================================================
---================================ TASISTENCIA =========================================
---======================================================================================
+*/

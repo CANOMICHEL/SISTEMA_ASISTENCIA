@@ -98,8 +98,6 @@ create table TMatricula
 	AñoCurricular varchar(8) not null,
 	CodAlumno varchar(8) not null,
 	CodGrado varchar(8) not null,
-	Seccion varchar(20) not null,
-	Nivel varchar(8) not null,
 	CodDocente varchar(8) not null,
 
 	primary key (AñoCurricular,CodAlumno),
@@ -114,16 +112,13 @@ create table TMatricula
 create table TAsistenciaAlumno
 (
 	-- lista de atributos
-	CodAsistenciaAlumno varchar (50) not null,
-	
-	AñoCurricular varchar(8) not null,
-	CodAlumno varchar(8) not null,
-
 	Fecha DateTime,
+	CodAlumno varchar(8) not null,
+	AñoCurricular varchar(8) not null,
 	Estado varchar(8),
 	Observacion varchar (50) not null,
 
-	primary key (CodAsistenciaAlumno),
+	primary key (Fecha,CodAlumno),
 
 	foreign key (AñoCurricular,CodAlumno) references TMatricula(AñoCurricular,CodAlumno),
 	--foreign key (CodCargo) references TCargo(CodCargo),
@@ -144,10 +139,10 @@ insert into TDocente values('D001','1234','24943726','El profesor de Jaimito','U
 insert into TGrado values('G01','1','A','P')
 
 --============================================= MATRICULA ====================================================
-insert into TMatricula values('2016','A0001','1','A','P','D001')
-insert into TMatricula values('2016','A0002','1','A','P','D001')
+insert into TMatricula values('2016','A0001','G01','D001')
+insert into TMatricula values('2016','A0002','G01','D001')
 
 --============================================= ASISTENCIA ====================================================
-insert into TAsistenciaAlumno values('01/10/2016','2016','A0001','01/10/2016','P','El alumno se comportó mal')
+insert into TAsistenciaAlumno values('01/10/2016','A0001','2016','P','El alumno se comportó mal')
 
 
