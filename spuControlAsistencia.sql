@@ -95,12 +95,6 @@ end
 go
 
 --======================================================================================
---================================ TTIPODOCENTE ========================================
---======================================================================================
-
-
-
---======================================================================================
 --================================== TDOCENTE ==========================================
 --======================================================================================
 -- SPU Insertar Docente
@@ -160,7 +154,7 @@ create procedure spuTDocente_Actualizar
 	@Nombre varchar (20), 
 	@Direccion varchar (50),
 	@Telefono varchar (10),
-	@CodTipoDocente varchar(8)
+	@TipoDocente varchar(8)
 as
 begin
 	-- Validacion del codigo
@@ -181,7 +175,7 @@ begin
 						Direccion = @Direccion,
 						Telefono = @Telefono,
 						DNI = @DNI,
-						CodTipoDocente = @CodTipoDocente
+						TipoDocente = @TipoDocente
 						where CodDocente = @CodDocente
 					-- Confirmacion operacion
 					select CodError = 0, Mensaje = 'Registro insertado exitosamente'
@@ -221,6 +215,7 @@ if exists (select * from dbo.sysobjects where name = 'spuTGrado_Insertar')
 go
 create procedure spuTGrado_Insertar
 	@CodGrado varchar(8),
+	@Grado varchar(2),
 	@Seccion varchar (20),
 	@Nivel varchar(8)
 as
@@ -228,59 +223,66 @@ begin
 	-- Validacion del codigo
 	if (@CodGrado != '')
 	begin
-		-- Validar contraseña
-		if (@Seccion != '')
+		if (@Grado != '')
 		begin
-			-- Validar el Nombre
-			if (@Nivel != '')
+			-- Validar contraseña
+			if (@Seccion != '')
 			begin
-				if (not exists (select * from TGrado where CodGrado = @CodGrado and Seccion=@Seccion and Nivel=@Nivel))
+				-- Validar el Nombre
+				if (@Nivel != '')
 				begin
-					-- Insertar nuevo cliente
-					insert into TGrado
-					values(@CodGrado,@Seccion,@Nivel)
-					-- COnfirmacion operacion
-					select CodError = 0, Mensaje = 'Registro insertado exitosamente'
+					if (not exists (select * from TGrado where CodGrado = @CodGrado))
+					begin
+						-- Insertar nuevo cliente
+						insert into TGrado
+						values(@CodGrado,@Grado,@Seccion,@Nivel)
+						-- COnfirmacion operacion
+						select CodError = 0, Mensaje = 'Registro insertado exitosamente'
+					end
+					else
+						select CodError = 1, Mensaje = 'Ya existe un grado con esas características'
+
 				end
 				else
-					select CodError = 1, Mensaje = 'Ya existe un grado con esas características'
-
+					select CodError = 1, Mensaje = 'Se debe completar el espacio designado para nivel'
 			end
 			else
-				select CodError = 1, Mensaje = 'Se debe completar el espacio designado para nivel'
+				select CodError = 1, Mensaje = 'Se debe completar el espacio designado para seccion'
 		end
 		else
-			select CodError = 1, Mensaje = 'Se debe completar el espacio designado para seccion'
+			select CodError = 1, Mensaje = 'Se debe completar el espacio designado para grado'
 	end
 	else
 		select CodError = 1, Mensaje = 'El código del grado se encuentra en blanco'
 end
 go
 
-/*
+
 -- SPU Actualizar Grado
 if exists (select * from dbo.sysobjects where name = 'spuTGrado_Actualizar')
 	drop procedure spuTGrado_Actualizar
 go
 create procedure spuTGrado_Actualizar
 	@CodGrado varchar(8),
+	@Grado varchar(2),
 	@Seccion varchar (20),
 	@Nivel varchar(8)
 as
 begin
 	-- Validacion del codigo docente
-	if (@CodDocente != '' and exists (select * from TDocente where CodDocente = @CodDocente))
+	if (@CodGrado != '' and exists (select * from TGrado where CodGrado = @CodGrado))
 	begin
-		if (@Contraseña != '')
+		if (@Grado != '')
 		begin
 			-- Validar el DNI
-			if (@DNI != '')
+			if (@Seccion != '')
 			begin
 				-- Validad el Nombre
-				if (@Nombre != '')
+				if (@Nivel != '')
 				begin
 					-- Insertar nuevo alumno
 					update TGrado set 
+						Grado = @Grado,
 						Seccion = @Seccion,
 						Nivel = @Nivel
 						where CodGrado = @CodGrado
@@ -300,7 +302,7 @@ begin
 		select CodError = 1, Mensaje = 'El código del docente no existe en la base de datos'
 end
 go
-*/
+
 -- SPU Listar Grados
 if exists (select * from dbo.sysobjects where name = 'spuTGrado_Listar')
 	drop procedure spuTGrado_Listar
@@ -405,7 +407,7 @@ begin
 								CodGrado = @CodGrado,
 								Seccion = @Seccion,
 								Nivel = @Nivel,
-								CodDocente = @CodDocente,
+								CodDocente = @CodDocente
 								where AñoCurricular = @AñoCurricular and CodAlumno = @CodAlumno
 							-- Confirmacion operacion
 							select CodError = 0, Mensaje = 'Registro insertado exitosamente'
