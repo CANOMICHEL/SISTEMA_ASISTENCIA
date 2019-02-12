@@ -28,14 +28,14 @@ create table TAlumno
 	primary key (CodAlumno)
 )
 go
-create table TTipoDocente
-(
-	-- Lista de atributos
-	CodTipoDocente varchar(8) not null,
-	TipoDocente varchar(20)not null,
+--create table TTipoDocente
+--(
+--	-- Lista de atributos
+--	CodTipoDocente varchar(8) not null,
+--	TipoDocente varchar(20)not null,
 
-	primary key (CodTipoDocente)
-)
+--	primary key (CodTipoDocente)
+--)
 
 create table TDocente
 (	-- lista de atributos
@@ -45,22 +45,23 @@ create table TDocente
 	Nombre varchar (50) not null,
 	Direccion varchar (50),
 	Telefono varchar (10),
-	CodTipoDocente varchar(8) not null,
+	TipoDocente varchar(20) not null,
 
 	-- definicion de la clave foranea
 	primary key (CodDocente),
 
-	foreign key (CodTipoDocente) references TTipoDocente(CodTipoDocente),
+	--foreign key (CodTipoDocente) references TTipoDocente(CodTipoDocente),
 )
 go
 create table TGrado
 (
 	-- Lista atributos
 	CodGrado varchar(8) not null,
+	Grado varchar(2) not null,
 	Seccion varchar (20) not null,
 	Nivel varchar(8)
 
-	primary key (CodGrado,Seccion,Nivel)
+	primary key (CodGrado)
 )
 go
 --create table TCargo
@@ -104,7 +105,7 @@ create table TMatricula
 	primary key (AñoCurricular,CodAlumno),
 
 	foreign key (CodAlumno) references TAlumno(CodAlumno),
-	foreign key (CodGrado,Seccion, Nivel) references TGrado(CodGrado,Seccion, Nivel),
+	foreign key (CodGrado) references TGrado(CodGrado),
 	foreign key (CodDocente) references TDocente(CodDocente),
 	
 
@@ -134,13 +135,13 @@ go
 insert into TAlumno values('A0001','91758846','Jaimito','Av. Los chistes Cuadra 3','')
 insert into TAlumno values('A0002','34251217','Jaime','Av. Loritos Cuadra 1','')
 --=========================================== TIPO DOCENTE ====================================================
-insert into TTipoDocente values('SE','Docente Secundaria')
+--insert into TTipoDocente values('SE','Docente Secundaria')
 
 --============================================= DOCENTE ====================================================
 insert into TDocente values('D001','1234','24943726','El profesor de Jaimito','Urb. Michi','984758836','SE')
 
 --============================================= GRADO ====================================================
-insert into TGrado values('1','A','P')
+insert into TGrado values('G01','1','A','P')
 
 --============================================= MATRICULA ====================================================
 insert into TMatricula values('2016','A0001','1','A','P','D001')

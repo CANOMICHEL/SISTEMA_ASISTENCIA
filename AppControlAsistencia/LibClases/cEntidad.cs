@@ -9,7 +9,7 @@ using System.Data.SqlClient;
 
 namespace LibClases
 {
-   //Virtual: Son metodos que los heredan los hijos
+    //Virtual: Son metodos que los heredan los hijos
 
     //Abstracta: Clase que no se puede instanciar (no se puede hacer cEntidad = new cEntidad())
     //          Tambien obligas al hijo a que ponga este código, porque si no lo hace... no funciona
@@ -18,11 +18,12 @@ namespace LibClases
     public abstract class cEntidad
     {
         //==================== Atributos ==================
-        private cConexion aConexion;
+        protected cConexion aConexion;
         private string aNombreTabla; // Porque es lo unico que cambia en algunas consultas
         string[] aNombres = null; //-- Nombres de los campos de la tabla
         string[] aValores = null; // -- valores de los campos de la tabla
         private bool aNuevo;
+        int CantClavesPrimarias;
 
         //==================== Metodos ====================
         //------------------ Constructores ----------------
@@ -57,6 +58,7 @@ namespace LibClases
         //Params: Sirve para ingresar un numero de parametros variables (se ingresan como un arreglo)
         public virtual void Insertar(params string[] Atributos)
         {
+            /*
             //-- Permite insertar informacion de un registro en la tabla
 
             //-- Recuperar los valores de los atributos
@@ -77,10 +79,37 @@ namespace LibClases
             //Ejecutar la consulta para insertar el registro
             aConexion.EjecutarComando(CadenaInsertar);
             aNuevo = false;
+            */
+            //-- Permite insertar informacion de un registro en la tabla
+            //================================================================================
+            //-- Recuperar los valores de los atributos
+            aValores = Atributos;
+            //-- Formar la cadena de insercion
+            string CadenaInsertar = "exec spu" + aNombreTabla + "_Insertar '";
+            for (int k = 0; k < aValores.Length; k++)
+            {
+                //-- incluir los atributos en la consulta
+                CadenaInsertar += aValores[k];
+                if (k == aValores.Length - 1)
+                    //-- se concatenó el ultimo atributo. Terminar la consulta
+                    CadenaInsertar += "'";
+                else
+                    //-- dejar la consulta lista para el siguiente atributo
+                    CadenaInsertar += "', '";
+            }
+            //Ejecutar la consulta para insertar el registro
+            //aConexion.EjecutarComando(CadenaInsertar);
+            //aNuevo = false;
+            Console.WriteLine(CadenaInsertar);
+            aConexion.EjecutarSelect(CadenaInsertar);
+            //Verificar el resultado de la insercion
+            if (ValorAtributo("CodError") == "0")
+                aNuevo = true;
         }
         //------------------- Actualizar registros -----------------------
         public virtual void Actualizar(params string[] Atributos)
         {
+            /*
             //-- Permite actualizar informacion de un registro en la tabla
 
             //-- Recuperar los valores de los atributos
@@ -94,7 +123,30 @@ namespace LibClases
                 else
                     CadenaActualizar += aNombres[k] + "= '" + aValores[k] + "',";
             }
-            CadenaActualizar += "where " + aNombres[0] + "= '" + aValores[0] + "'";
+            CadenaActualizar += "where "+ aNombres[0]+ "= '"+ aValores[0] + "'";
+            */
+            //-- Permite actualizar informacion de un registro en la tabla
+
+            //-- Recuperar los valores de los atributos
+            string CadenaActualizar = "exec spu" + aNombreTabla + "_Actualizar '";
+            for (int k = 0; k < aValores.Length; k++)
+            {
+                //-- incluir los atributos en la consulta
+                CadenaActualizar += aValores[k];
+                if (k == aValores.Length - 1)
+                    //-- se concatenó el ultimo atributo. Terminar la consulta
+                    CadenaActualizar += "'";
+                else
+                    //-- dejar la consulta lista para el siguiente atributo
+                    CadenaActualizar += "', '";
+            }
+            //Ejecutar la consulta para insertar el registro
+            //aConexion.EjecutarComando(CadenaInsertar);
+            //aNuevo = false;
+            aConexion.EjecutarSelect(CadenaActualizar);
+            //Verificar el resultado de la insercion
+            if (ValorAtributo("CodError") == "0")
+                aNuevo = true;
         }
         //TAREAAAAAA Terminar metodo actualizar como el insertar
         //------------------- Eliminar registros -----------------------
@@ -157,8 +209,10 @@ namespace LibClases
         public DataTable ListaGeneral()
         {
             //-- Retorna una tabla co0n la lista completa de libros
-            string Consulta = "select * from " + aNombreTabla;
+            //string Consulta = "select * from " + aNombreTabla;
+            string Consulta = "exec spu" + aNombreTabla + "_Listar";
             aConexion.EjecutarSelect(Consulta);
+
             return aConexion.Datos.Tables[0];
         }
     }

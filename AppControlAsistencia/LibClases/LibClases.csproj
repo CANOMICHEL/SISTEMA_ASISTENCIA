@@ -40,6 +40,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="cAlumno.cs" />
+    <Compile Include="cAsistenciaAlumno.cs" />
     <Compile Include="cConexion.cs" />
     <Compile Include="cDocente.cs" />
     <Compile Include="cEntidad.cs" />

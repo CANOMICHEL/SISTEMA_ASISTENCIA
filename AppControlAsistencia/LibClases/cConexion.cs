@@ -10,7 +10,7 @@ using System.Data.SqlClient;
 
 namespace LibClases
 {
-    class cConexion
+    public class cConexion
     {
         //=================== ATRIBUTOS ====================
         private SqlConnection aConexion;
@@ -24,8 +24,10 @@ namespace LibClases
             aDatos = new DataSet();
             aAdaptador = new SqlDataAdapter();
             //Realizar la conexion
-            String CadenaConexion = "Data Source=INFO-PC;Initial Catalog=BdBiblioteca;Integrated Security=SSPI;";
+            //String CadenaConexion = "Data Source=INFO-PC;Initial Catalog=BdBiblioteca;Integrated Security=SSPI;";
             //String CadenaConexion = "Data Source=DESKTOP-SNCH8FI\\SQLEXPRESS;Initial Catalog=BdBiblioteca;Integrated Security=SSPI;";
+            String CadenaConexion = "Data Source=DESKTOP - MT8GR7I;Initial Catalog=BdBiblioteca;Integrated Security=SSPI;";
+            
             //Si el nombre del servidor tiene un 'contraslash' se debe colocar doble
             aConexion = new SqlConnection(CadenaConexion);
         }

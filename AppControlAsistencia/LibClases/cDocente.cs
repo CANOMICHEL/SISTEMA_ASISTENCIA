@@ -19,7 +19,7 @@ namespace LibClases
         //---- Implementacion de metodos abstractos
         public override string[] NombresAtributos()
         {
-            return new string[] { "CodLector", "Nombre", "Direccion", "Telefono", "DocIdentidad" };
+            return new string[] { "CodDocente", "Contraseña", "DNI", "Nombre", "Direccion", "Telefono","TipoDocente" };
         }
     }
 }
