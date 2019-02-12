@@ -268,7 +268,7 @@ create procedure spuTGrado_Actualizar
 	@Nivel varchar(8)
 as
 begin
-	-- Validacion del codigo
+	-- Validacion del codigo docente
 	if (@CodDocente != '' and exists (select * from TDocente where CodDocente = @CodDocente))
 	begin
 		if (@Contraseña != '')
