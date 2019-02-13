@@ -13,3 +13,8 @@ C:\Users\Admin\SISTEMA_ASISTENCIA\AppControlAsistencia\LibClases\bin\Debug\LibCl
 C:\Users\Admin\SISTEMA_ASISTENCIA\AppControlAsistencia\LibClases\obj\Debug\LibClases.csprojResolveAssemblyReference.cache
 C:\Users\Admin\SISTEMA_ASISTENCIA\AppControlAsistencia\LibClases\obj\Debug\LibClases.dll
 C:\Users\Admin\SISTEMA_ASISTENCIA\AppControlAsistencia\LibClases\obj\Debug\LibClases.pdb
+C:\Users\mcl\Desktop\SISTEMA_ASISTENCIA\AppControlAsistencia\LibClases\bin\Debug\LibClases.dll
+C:\Users\mcl\Desktop\SISTEMA_ASISTENCIA\AppControlAsistencia\LibClases\bin\Debug\LibClases.pdb
+C:\Users\mcl\Desktop\SISTEMA_ASISTENCIA\AppControlAsistencia\LibClases\obj\Debug\LibClases.csprojResolveAssemblyReference.cache
+C:\Users\mcl\Desktop\SISTEMA_ASISTENCIA\AppControlAsistencia\LibClases\obj\Debug\LibClases.dll
+C:\Users\mcl\Desktop\SISTEMA_ASISTENCIA\AppControlAsistencia\LibClases\obj\Debug\LibClases.pdb
