@@ -60,30 +60,35 @@ namespace LibFormularios
         {
             if (aDocente.RespuestaLogin(txtUsername.Text, txtPassword.Text))
             {
-                Console.WriteLine(txtUsername.Text[0].ToString() + txtUsername.Text[1]);
+                //Console.WriteLine(txtUsername.Text[0].ToString() + txtUsername.Text[1]);
                 if (txtUsername.Text[0].ToString() + txtUsername.Text[1] == "DP")
                 {
-                    Console.WriteLine("Llego aqui");
+                    //Console.WriteLine("Llego aqui");
                     frmAsistencia L = new frmAsistencia();
+                    L.textBox1.Text = txtUsername.Text;
                     L.ShowDialog();
+                    
                 }
                 if (txtUsername.Text[0].ToString() + txtUsername.Text[1] == "DS")
                 {
                     //Abrir formulario de docente secunadria
                     frmAsistencia L = new frmAsistencia();
+                    L.textBox1.Text = txtUsername.Text;
                     L.ShowDialog();
+                    
                 }
                 if (txtUsername.Text[0].ToString() + txtUsername.Text[1] == "DI")
                 {
                     //Abrir formulario de director
                     frmDirector L = new frmDirector();
-                    L.ShowDialog();
+                    this.ShowDialog();
                 }
                 if (txtUsername.Text[0].ToString() + txtUsername.Text[1] == "AU")
                 {
                     //Abrir formulario de auxiliar
                     frmIngresoDatos L = new frmIngresoDatos();
-                    L.ShowDialog();
+                    this.ShowDialog();
+
                 }
 
             }

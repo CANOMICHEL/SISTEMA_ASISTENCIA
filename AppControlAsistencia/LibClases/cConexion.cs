@@ -26,9 +26,9 @@ namespace LibClases
             //Realizar la conexion
             //String CadenaConexion = "Data Source=INFO-PC;Initial Catalog=BdBiblioteca;Integrated Security=SSPI;";
             //String CadenaConexion = "Data Source=DESKTOP-SNCH8FI\\SQLEXPRESS;Initial Catalog=BdControlAsistencia;Integrated Security=SSPI;";
-            String CadenaConexion = "Data Source=DESKTOP-MT8GR7I;Initial Catalog=BDControlAsistencia;Integrated Security=SSPI;";
+            //String CadenaConexion = "Data Source=DESKTOP-MT8GR7I;Initial Catalog=BDControlAsistencia;Integrated Security=SSPI;";
             //String CadenaConexion = "Data Source=DESKTOP-QSBGI71\\SQLEXPRESS;Initial Catalog=BdControlAsistencia;Integrated Security=SSPI;";
-
+            String CadenaConexion = "Data Source=LENOVO-PC\\SQLEXPRESS;Initial Catalog=BDControlAsistencia;Integrated Security=SSPI;";
             //Si el nombre del servidor tiene un 'contraslash' se debe colocar doble
             aConexion = new SqlConnection(CadenaConexion);
         }
