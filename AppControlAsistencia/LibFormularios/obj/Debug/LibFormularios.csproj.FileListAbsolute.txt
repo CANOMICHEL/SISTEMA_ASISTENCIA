@@ -47,3 +47,15 @@ C:\Users\Rodrigo\SISTEMA_ASISTENCIA\AppControlAsistencia\LibFormularios\obj\Debu
 C:\Users\Rodrigo\SISTEMA_ASISTENCIA\AppControlAsistencia\LibFormularios\obj\Debug\LibFormularios.dll
 C:\Users\Rodrigo\SISTEMA_ASISTENCIA\AppControlAsistencia\LibFormularios\obj\Debug\LibFormularios.pdb
 >>>>>>> ddfe88dc4d2839978699a988e66e214afd119253
+C:\Users\Admin\SISTEMA_ASISTENCIA\AppControlAsistencia\LibFormularios\obj\Debug\LibFormularios.csprojResolveAssemblyReference.cache
+C:\Users\Admin\SISTEMA_ASISTENCIA\AppControlAsistencia\LibFormularios\obj\Debug\LibFormularios.frmAsistencia.resources
+C:\Users\Admin\SISTEMA_ASISTENCIA\AppControlAsistencia\LibFormularios\obj\Debug\LibFormularios.frmControlUsuario.resources
+C:\Users\Admin\SISTEMA_ASISTENCIA\AppControlAsistencia\LibFormularios\obj\Debug\LibFormularios.frmDirector.resources
+C:\Users\Admin\SISTEMA_ASISTENCIA\AppControlAsistencia\LibFormularios\obj\Debug\LibFormularios.frmIngresoDatos.resources
+C:\Users\Admin\SISTEMA_ASISTENCIA\AppControlAsistencia\LibFormularios\obj\Debug\LibFormularios.csproj.GenerateResource.Cache
+C:\Users\Admin\SISTEMA_ASISTENCIA\AppControlAsistencia\LibFormularios\obj\Debug\LibFormularios.dll
+C:\Users\Admin\SISTEMA_ASISTENCIA\AppControlAsistencia\LibFormularios\obj\Debug\LibFormularios.pdb
+C:\Users\Admin\SISTEMA_ASISTENCIA\AppControlAsistencia\LibFormularios\bin\Debug\LibFormularios.dll
+C:\Users\Admin\SISTEMA_ASISTENCIA\AppControlAsistencia\LibFormularios\bin\Debug\LibFormularios.pdb
+C:\Users\Admin\SISTEMA_ASISTENCIA\AppControlAsistencia\LibFormularios\bin\Debug\LibClases.dll
+C:\Users\Admin\SISTEMA_ASISTENCIA\AppControlAsistencia\LibFormularios\bin\Debug\LibClases.pdb

@@ -89,11 +89,11 @@ namespace LibFormularios
             }
             else
             {
-<<<<<<< HEAD
+
                 MessageBox.Show("Acceso Denegado");
-=======
-                MessageBox.Show("Nope miserable");
->>>>>>> ddfe88dc4d2839978699a988e66e214afd119253
+
+               
+
             }
             //aqui se verificara que el usuario y contraseña sea válido
             //ademas se debe verificar que el usuario acceda al sistema correcto

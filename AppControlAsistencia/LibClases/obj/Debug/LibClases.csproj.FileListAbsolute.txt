@@ -8,3 +8,8 @@ C:\Users\Rodrigo\SISTEMA_ASISTENCIA\AppControlAsistencia\LibClases\obj\Debug\Lib
 C:\Users\Rodrigo\SISTEMA_ASISTENCIA\AppControlAsistencia\LibClases\obj\Debug\LibClases.csproj.CoreCompileInputs.cache
 C:\Users\Rodrigo\SISTEMA_ASISTENCIA\AppControlAsistencia\LibClases\obj\Debug\LibClases.dll
 C:\Users\Rodrigo\SISTEMA_ASISTENCIA\AppControlAsistencia\LibClases\obj\Debug\LibClases.pdb
+C:\Users\Admin\SISTEMA_ASISTENCIA\AppControlAsistencia\LibClases\bin\Debug\LibClases.dll
+C:\Users\Admin\SISTEMA_ASISTENCIA\AppControlAsistencia\LibClases\bin\Debug\LibClases.pdb
+C:\Users\Admin\SISTEMA_ASISTENCIA\AppControlAsistencia\LibClases\obj\Debug\LibClases.csprojResolveAssemblyReference.cache
+C:\Users\Admin\SISTEMA_ASISTENCIA\AppControlAsistencia\LibClases\obj\Debug\LibClases.dll
+C:\Users\Admin\SISTEMA_ASISTENCIA\AppControlAsistencia\LibClases\obj\Debug\LibClases.pdb
