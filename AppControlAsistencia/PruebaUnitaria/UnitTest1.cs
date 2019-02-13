@@ -106,7 +106,7 @@ namespace PruebaUnitaria
 
         }
         [TestMethod]
-        public void ValidarOkCodAlumnoOkDNIOkNombre_True()
+        public void ValidarAlumnoOkCodAlumnoOkDNIOkNombre_True()
         {
             string CodAlumno = "A0004";
             string DNI = "72712946";
@@ -131,7 +131,7 @@ namespace PruebaUnitaria
 
         }
         [TestMethod]
-        public void ValidarOkCodAlumnoOkDNINullNombre_True()
+        public void ValidarAlumnoOkCodAlumnoOkDNINullNombre_True()
         {
             string CodAlumno = "A0004";
             string DNI = "72712946";
@@ -157,7 +157,7 @@ namespace PruebaUnitaria
 
         }
         [TestMethod]
-        public void ValidarOKCodAlumnoNullDNIOkNombre_True()
+        public void ValidarAlumnoOKCodAlumnoNullDNIOkNombre_True()
         {
             string CodAlumno = "A0004";
             string DNI = "";
@@ -183,7 +183,7 @@ namespace PruebaUnitaria
 
         }
         [TestMethod]
-        public void ValidarNullCodAlumnoOkDNIOkNombre_True()
+        public void ValidarAlumnoNullCodAlumnoOkDNIOkNombre_True()
         {
             string CodAlumno = "";
             string DNI = "72712946";
@@ -209,7 +209,7 @@ namespace PruebaUnitaria
 
         }
         [TestMethod]
-        public void ValidarOkCodAlumnoNullDNINullNombre_True()
+        public void ValidarAlumnoOkCodAlumnoNullDNINullNombre_True()
         {
             string CodAlumno = "A0004";
             string DNI = "";
@@ -235,7 +235,7 @@ namespace PruebaUnitaria
 
         }
         [TestMethod]
-        public void ValidarNullCodAlumnoOkDNINullNombre_True()
+        public void ValidarAlumnoNullCodAlumnoOkDNINullNombre_True()
         {
             string CodAlumno = "";
             string DNI = "72712946";
@@ -260,7 +260,7 @@ namespace PruebaUnitaria
 
         }
         [TestMethod]
-        public void ValidarNullCodAlumnoNullDNIOkNombre_True()
+        public void ValidarAlumnoNullCodAlumnoNullDNIOkNombre_True()
         {
             string CodAlumno = "";
             string DNI = "";
@@ -286,7 +286,7 @@ namespace PruebaUnitaria
 
         }
         [TestMethod]
-        public void ValidarNullCodAlumnoNullDNINullNombre_True()
+        public void ValidarAlumnoNullCodAlumnoNullDNINullNombre_True()
         {
             string CodAlumno = "";
             string DNI = "";
@@ -312,7 +312,7 @@ namespace PruebaUnitaria
 
         }
         [TestMethod]
-        public void ValidarOKExisteCodAlumnoOkDNIOkNombre_True()
+        public void ValidarAlumnoOKExisteCodAlumnoOkDNIOkNombre_True()
         {
             string CodAlumno = "A0001";
             string DNI = "72712346";
@@ -338,7 +338,7 @@ namespace PruebaUnitaria
 
         }
         [TestMethod]
-        public void ValidarOKExisteCodAlumnoOkDNINullNombre_True()
+        public void ValidarAlumnoOKExisteCodAlumnoOkDNINullNombre_True()
         {
             string CodAlumno = "A0001";
             string DNI = "72712346";
@@ -364,7 +364,7 @@ namespace PruebaUnitaria
 
         }
         [TestMethod]
-        public void ValidarOKExisteCodAlumnoNullDNIOkNombre_True()
+        public void ValidarAlumnoOKExisteCodAlumnoNullDNIOkNombre_True()
         {
             string CodAlumno = "A0001";
             string DNI = "";
@@ -390,7 +390,7 @@ namespace PruebaUnitaria
 
         }
         [TestMethod]
-        public void ValidarOKExisteCodAlumnoNullDNINullNombre_True()
+        public void ValidarAlumnoOKExisteCodAlumnoNullDNINullNombre_True()
         {
             string CodAlumno = "A0001";
             string DNI = "";
