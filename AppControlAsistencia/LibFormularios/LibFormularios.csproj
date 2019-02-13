@@ -47,16 +47,28 @@
     <Compile Include="frmAsistencia.Designer.cs">
       <DependentUpon>frmAsistencia.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmAuxiliar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmAuxiliar.Designer.cs">
+      <DependentUpon>frmAuxiliar.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmControlUsuario.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="frmControlUsuario.Designer.cs">
       <DependentUpon>frmControlUsuario.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmDirector.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmDirector.Designer.cs">
+      <DependentUpon>frmDirector.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmIngresoDatos.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmIngresoDatos.designer.cs">
+    <Compile Include="frmIngresoDatos.Designer.cs">
       <DependentUpon>frmIngresoDatos.cs</DependentUpon>
     </Compile>
     <Compile Include="FrmPadre.cs">
@@ -73,6 +85,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmControlUsuario.resx">
       <DependentUpon>frmControlUsuario.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmDirector.resx">
+      <DependentUpon>frmDirector.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmIngresoDatos.resx">
       <DependentUpon>frmIngresoDatos.cs</DependentUpon>

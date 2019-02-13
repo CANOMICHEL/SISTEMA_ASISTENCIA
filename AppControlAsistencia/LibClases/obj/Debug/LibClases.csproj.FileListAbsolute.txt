@@ -1,6 +1,5 @@
 C:\Users\Lenovo\Desktop\SISTEMA_ASISTENCIA\AppControlAsistencia\LibClases\bin\Debug\LibClases.dll
 C:\Users\Lenovo\Desktop\SISTEMA_ASISTENCIA\AppControlAsistencia\LibClases\bin\Debug\LibClases.pdb
-C:\Users\Lenovo\Desktop\SISTEMA_ASISTENCIA\AppControlAsistencia\LibClases\obj\Debug\LibClases.csprojResolveAssemblyReference.cache
 C:\Users\Lenovo\Desktop\SISTEMA_ASISTENCIA\AppControlAsistencia\LibClases\obj\Debug\LibClases.dll
 C:\Users\Lenovo\Desktop\SISTEMA_ASISTENCIA\AppControlAsistencia\LibClases\obj\Debug\LibClases.pdb
 C:\Users\Rodrigo\SISTEMA_ASISTENCIA\AppControlAsistencia\LibClases\bin\Debug\LibClases.dll

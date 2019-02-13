@@ -1,4 +1,4 @@
-﻿namespace AppControlAsistencia
+﻿namespace LibFormularios
 {
     partial class frmControlUsuario
     {
@@ -29,49 +29,18 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmControlUsuario));
-            this.panel = new System.Windows.Forms.Panel();
-            this.txtPassword = new System.Windows.Forms.TextBox();
             this.txtUsername = new System.Windows.Forms.TextBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.panel = new System.Windows.Forms.Panel();
+            this.txtPassword = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.lblUser = new System.Windows.Forms.Label();
             this.btnAcceder = new System.Windows.Forms.Button();
-            this.panel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            this.panel.SuspendLayout();
             this.SuspendLayout();
-            // 
-            // panel
-            // 
-            this.panel.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("panel.BackgroundImage")));
-            this.panel.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.panel.Controls.Add(this.txtPassword);
-            this.panel.Controls.Add(this.txtUsername);
-            this.panel.Controls.Add(this.pictureBox1);
-            this.panel.Controls.Add(this.pictureBox2);
-            this.panel.Controls.Add(this.label1);
-            this.panel.Controls.Add(this.lblUser);
-            this.panel.Controls.Add(this.btnAcceder);
-            this.panel.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel.Location = new System.Drawing.Point(0, 0);
-            this.panel.Name = "panel";
-            this.panel.Size = new System.Drawing.Size(729, 420);
-            this.panel.TabIndex = 0;
-            // 
-            // txtPassword
-            // 
-            this.txtPassword.BackColor = System.Drawing.Color.LightSteelBlue;
-            this.txtPassword.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtPassword.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtPassword.ForeColor = System.Drawing.SystemColors.GrayText;
-            this.txtPassword.Location = new System.Drawing.Point(41, 241);
-            this.txtPassword.Name = "txtPassword";
-            this.txtPassword.Size = new System.Drawing.Size(380, 22);
-            this.txtPassword.TabIndex = 12;
-            this.txtPassword.Text = "Contraseña";
-            this.txtPassword.Enter += new System.EventHandler(this.enter_event);
-            this.txtPassword.Leave += new System.EventHandler(this.leave_event);
             // 
             // txtUsername
             // 
@@ -104,6 +73,37 @@
             this.pictureBox2.Size = new System.Drawing.Size(262, 74);
             this.pictureBox2.TabIndex = 13;
             this.pictureBox2.TabStop = false;
+            // 
+            // panel
+            // 
+            this.panel.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("panel.BackgroundImage")));
+            this.panel.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.panel.Controls.Add(this.txtPassword);
+            this.panel.Controls.Add(this.txtUsername);
+            this.panel.Controls.Add(this.pictureBox1);
+            this.panel.Controls.Add(this.pictureBox2);
+            this.panel.Controls.Add(this.label1);
+            this.panel.Controls.Add(this.lblUser);
+            this.panel.Controls.Add(this.btnAcceder);
+            this.panel.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel.Location = new System.Drawing.Point(0, 0);
+            this.panel.Name = "panel";
+            this.panel.Size = new System.Drawing.Size(745, 461);
+            this.panel.TabIndex = 1;
+            // 
+            // txtPassword
+            // 
+            this.txtPassword.BackColor = System.Drawing.Color.LightSteelBlue;
+            this.txtPassword.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtPassword.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtPassword.ForeColor = System.Drawing.SystemColors.GrayText;
+            this.txtPassword.Location = new System.Drawing.Point(41, 241);
+            this.txtPassword.Name = "txtPassword";
+            this.txtPassword.Size = new System.Drawing.Size(380, 22);
+            this.txtPassword.TabIndex = 12;
+            this.txtPassword.Text = "Contraseña";
+            this.txtPassword.Enter += new System.EventHandler(this.enter_event);
+            this.txtPassword.Leave += new System.EventHandler(this.leave_event);
             // 
             // label1
             // 
@@ -143,29 +143,27 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(729, 420);
+            this.ClientSize = new System.Drawing.Size(745, 461);
             this.Controls.Add(this.panel);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Name = "frmControlUsuario";
-            this.Text = "login";
-            this.panel.ResumeLayout(false);
-            this.panel.PerformLayout();
+            this.Text = "frmControlUsuario";
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            this.panel.ResumeLayout(false);
+            this.panel.PerformLayout();
             this.ResumeLayout(false);
 
         }
 
         #endregion
 
-        private System.Windows.Forms.Panel panel;
+        private System.Windows.Forms.TextBox txtUsername;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.PictureBox pictureBox2;
+        private System.Windows.Forms.Panel panel;
         private System.Windows.Forms.TextBox txtPassword;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox txtUsername;
         private System.Windows.Forms.Label lblUser;
         private System.Windows.Forms.Button btnAcceder;
-
     }
 }

@@ -1,4 +1,4 @@
-﻿namespace AppControlAsistencia
+﻿namespace LibFormularios
 {
     partial class frmIngresoDatos
     {
@@ -28,14 +28,11 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            this.epError = new System.Windows.Forms.ErrorProvider(this.components);
-            this.panel1 = new System.Windows.Forms.Panel();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
-            this.tabPage2 = new System.Windows.Forms.TabPage();
-            this.button1 = new System.Windows.Forms.Button();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.btnGrabar = new System.Windows.Forms.Button();
             this.lblTitulo = new System.Windows.Forms.Label();
             this.cbSeccion = new System.Windows.Forms.ComboBox();
@@ -48,29 +45,13 @@
             this.txtApellidos = new System.Windows.Forms.TextBox();
             this.lblNombres = new System.Windows.Forms.Label();
             this.txtNombre = new System.Windows.Forms.TextBox();
-            this.panel2 = new System.Windows.Forms.Panel();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            ((System.ComponentModel.ISupportInitialize)(this.epError)).BeginInit();
-            this.panel1.SuspendLayout();
+            this.button1 = new System.Windows.Forms.Button();
+            this.tabPage2 = new System.Windows.Forms.TabPage();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
-            // 
-            // epError
-            // 
-            this.epError.ContainerControl = this;
-            // 
-            // panel1
-            // 
-            this.panel1.Controls.Add(this.tabControl1);
-            this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.panel1.Location = new System.Drawing.Point(0, 0);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(839, 524);
-            this.panel1.TabIndex = 0;
             // 
             // tabControl1
             // 
@@ -80,8 +61,8 @@
             this.tabControl1.Location = new System.Drawing.Point(0, 0);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(839, 524);
-            this.tabControl1.TabIndex = 0;
+            this.tabControl1.Size = new System.Drawing.Size(906, 530);
+            this.tabControl1.TabIndex = 1;
             // 
             // tabPage1
             // 
@@ -99,32 +80,38 @@
             this.tabPage1.Controls.Add(this.lblNombres);
             this.tabPage1.Controls.Add(this.txtNombre);
             this.tabPage1.Controls.Add(this.button1);
-            this.tabPage1.Location = new System.Drawing.Point(4, 29);
+            this.tabPage1.Location = new System.Drawing.Point(4, 22);
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage1.Size = new System.Drawing.Size(831, 491);
+            this.tabPage1.Size = new System.Drawing.Size(898, 504);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "ALUMNOS";
             this.tabPage1.UseVisualStyleBackColor = true;
             // 
-            // tabPage2
+            // panel2
             // 
-            this.tabPage2.Location = new System.Drawing.Point(4, 29);
-            this.tabPage2.Name = "tabPage2";
-            this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(876, 700);
-            this.tabPage2.TabIndex = 1;
-            this.tabPage2.Text = "DOCENTES";
-            this.tabPage2.UseVisualStyleBackColor = true;
+            this.panel2.Controls.Add(this.dataGridView1);
+            this.panel2.Location = new System.Drawing.Point(-1, 274);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(829, 423);
+            this.panel2.TabIndex = 39;
             // 
-            // button1
+            // dataGridView1
             // 
-            this.button1.Location = new System.Drawing.Point(732, 3);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(96, 32);
-            this.button1.TabIndex = 0;
-            this.button1.Text = "button1";
-            this.button1.UseVisualStyleBackColor = true;
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.GradientActiveCaption;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dataGridView1.DefaultCellStyle = dataGridViewCellStyle1;
+            this.dataGridView1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dataGridView1.Location = new System.Drawing.Point(0, 0);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.Size = new System.Drawing.Size(829, 423);
+            this.dataGridView1.TabIndex = 40;
             // 
             // btnGrabar
             // 
@@ -136,6 +123,7 @@
             this.btnGrabar.TabIndex = 38;
             this.btnGrabar.Text = "Grabar";
             this.btnGrabar.UseVisualStyleBackColor = true;
+            this.btnGrabar.Click += new System.EventHandler(this.btnGrabar_Click);
             // 
             // lblTitulo
             // 
@@ -238,8 +226,6 @@
             this.txtApellidos.Name = "txtApellidos";
             this.txtApellidos.Size = new System.Drawing.Size(488, 29);
             this.txtApellidos.TabIndex = 29;
-            this.txtApellidos.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.Presionartecla);
-            this.txtApellidos.Validating += new System.ComponentModel.CancelEventHandler(this.ControlarTexto);
             // 
             // lblNombres
             // 
@@ -258,44 +244,34 @@
             this.txtNombre.Name = "txtNombre";
             this.txtNombre.Size = new System.Drawing.Size(488, 29);
             this.txtNombre.TabIndex = 27;
-            this.txtNombre.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.Presionartecla);
-            this.txtNombre.Validating += new System.ComponentModel.CancelEventHandler(this.ControlarTexto);
             // 
-            // panel2
+            // button1
             // 
-            this.panel2.Controls.Add(this.dataGridView1);
-            this.panel2.Location = new System.Drawing.Point(-1, 274);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(829, 423);
-            this.panel2.TabIndex = 39;
+            this.button1.Location = new System.Drawing.Point(732, 3);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(96, 32);
+            this.button1.TabIndex = 0;
+            this.button1.Text = "button1";
+            this.button1.UseVisualStyleBackColor = true;
             // 
-            // dataGridView1
+            // tabPage2
             // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.GradientActiveCaption;
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dataGridView1.DefaultCellStyle = dataGridViewCellStyle1;
-            this.dataGridView1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dataGridView1.Location = new System.Drawing.Point(0, 0);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(829, 423);
-            this.dataGridView1.TabIndex = 40;
+            this.tabPage2.Location = new System.Drawing.Point(4, 22);
+            this.tabPage2.Name = "tabPage2";
+            this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage2.Size = new System.Drawing.Size(898, 504);
+            this.tabPage2.TabIndex = 1;
+            this.tabPage2.Text = "DOCENTES";
+            this.tabPage2.UseVisualStyleBackColor = true;
             // 
             // frmIngresoDatos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(839, 524);
-            this.Controls.Add(this.panel1);
+            this.ClientSize = new System.Drawing.Size(906, 530);
+            this.Controls.Add(this.tabControl1);
             this.Name = "frmIngresoDatos";
             this.Text = "frmIngresoDatos";
-            ((System.ComponentModel.ISupportInitialize)(this.epError)).EndInit();
-            this.panel1.ResumeLayout(false);
             this.tabControl1.ResumeLayout(false);
             this.tabPage1.ResumeLayout(false);
             this.tabPage1.PerformLayout();
@@ -307,8 +283,6 @@
 
         #endregion
 
-        private System.Windows.Forms.ErrorProvider epError;
-        private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.TabControl tabControl1;
         private System.Windows.Forms.TabPage tabPage1;
         private System.Windows.Forms.Panel panel2;

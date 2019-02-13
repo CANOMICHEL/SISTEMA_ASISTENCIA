@@ -8,7 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace AppControlAsistencia
+namespace LibFormularios
 {
     public partial class frmIngresoDatos : Form
     {
@@ -29,13 +29,17 @@ namespace AppControlAsistencia
 
         private void ControlarTexto(object sender, CancelEventArgs e)
         {
-            TextBox tb=(sender as TextBox);
+            TextBox tb = (sender as TextBox);
             if (tb.Text.Length == 0)
             {
                 tb.Focus();
-                this.epError.SetError(tb,"Este campo debe ser llenado");
+                //this.epError.SetError(tb, "Este campo debe ser llenado");
             }
         }
 
+        private void btnGrabar_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

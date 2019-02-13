@@ -9,14 +9,15 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 
 using LibClases;
+using LibFormularios;
 
-namespace AppControlAsistencia
+namespace LibFormularios
 {
     public partial class frmControlUsuario : Form
     {
         //Atributos
         cDocente aDocente = new cDocente();
-        
+
         public frmControlUsuario()
         {
             InitializeComponent();
@@ -57,21 +58,45 @@ namespace AppControlAsistencia
 
         private void btnAcceder_Click(object sender, EventArgs e)
         {
-            if(aDocente.RespuestaLogin(txtUsername.Text,txtPassword.Text))
+            if (aDocente.RespuestaLogin(txtUsername.Text, txtPassword.Text))
             {
-                MessageBox.Show("Existe usuario");
+                Console.WriteLine(txtUsername.Text[0].ToString() + txtUsername.Text[1]);
+                if (txtUsername.Text[0].ToString() + txtUsername.Text[1] == "DP")
+                {
+                    Console.WriteLine("Llego aqui");
+                    frmAsistencia L = new frmAsistencia();
+                    L.ShowDialog();
+                }
+                if (txtUsername.Text[0].ToString() + txtUsername.Text[1] == "DS")
+                {
+                    //Abrir formulario de docente secunadria
+                    frmAsistencia L = new frmAsistencia();
+                    L.ShowDialog();
+                }
+                if (txtUsername.Text[0].ToString() + txtUsername.Text[1] == "DI")
+                {
+                    //Abrir formulario de director
+                    frmDirector L = new frmDirector();
+                    L.ShowDialog();
+                }
+                if (txtUsername.Text[0].ToString() + txtUsername.Text[1] == "AU")
+                {
+                    //Abrir formulario de auxiliar
+                    frmIngresoDatos L = new frmIngresoDatos();
+                    L.ShowDialog();
+                }
 
             }
             else
             {
+<<<<<<< HEAD
+                MessageBox.Show("Acceso Denegado");
+=======
                 MessageBox.Show("Nope miserable");
+>>>>>>> ddfe88dc4d2839978699a988e66e214afd119253
             }
             //aqui se verificara que el usuario y contraseña sea válido
             //ademas se debe verificar que el usuario acceda al sistema correcto
         }
-
-
-
-
     }
 }
