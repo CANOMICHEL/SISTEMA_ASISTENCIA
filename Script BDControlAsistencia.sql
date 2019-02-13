@@ -145,10 +145,10 @@ insert into TGrado values('G02','1','B','P')
 
 insert into TGrado values('G08','1','A','S')
 
---============================================= MATRICULA ====================================================
-insert into TMatricula values('2016','A0001','G01','D001')
-insert into TMatricula values('2016','A0002','G01','D001')
-insert into TMatricula values('2016','A0003','G08','D002')
+-----============================================= MATRICULA ====================================================
+insert into TMatricula values('2016','A0001','G01','DP001')
+insert into TMatricula values('2016','A0002','G01','DP001')
+insert into TMatricula values('2016','A0003','G08','DS002')
 
 --============================================= ASISTENCIA ====================================================
 insert into TAsistenciaAlumno values('01/10/2016','A0001','2016','P','El alumno se comportó mal')
