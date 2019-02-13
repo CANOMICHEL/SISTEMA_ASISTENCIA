@@ -105,5 +105,315 @@ namespace PruebaUnitaria
 
 
         }
+        [TestMethod]
+        public void ValidarOkCodAlumnoOkDNIOkNombre_True()
+        {
+            string CodAlumno = "A0004";
+            string DNI = "72712946";
+            string Nombre = "Fernando Calla";
+            string Direccion="";
+            string Numero = "";
+            string[] a = new string[]{ CodAlumno, DNI, Nombre,Direccion,Numero };
+            cAlumno cAutenticacion = new cAlumno();
+
+            bool estadoResultante = true;
+            bool result;
+            try{
+                cAutenticacion.Insertar(a);
+                result = true;
+            }
+            catch (Exception e)
+            {
+                result = false;
+            }
+
+            Assert.AreEqual(estadoResultante, result);
+
+        }
+        [TestMethod]
+        public void ValidarOkCodAlumnoOkDNINullNombre_True()
+        {
+            string CodAlumno = "A0004";
+            string DNI = "72712946";
+            string Nombre = "";
+            string Direccion = "";
+            string Numero = "";
+            string[] a = new string[] { CodAlumno, DNI, Nombre, Direccion, Numero };
+            cAlumno cAutenticacion = new cAlumno();
+
+            bool estadoResultante = false;
+            bool result;
+            try
+            {
+                cAutenticacion.Insertar(a);
+                result = false;
+            }
+            catch (Exception e)
+            {
+                result = true;
+            }
+
+            Assert.AreEqual(estadoResultante, result);
+
+        }
+        [TestMethod]
+        public void ValidarOKCodAlumnoNullDNIOkNombre_True()
+        {
+            string CodAlumno = "A0004";
+            string DNI = "";
+            string Nombre = "Fernando Calla";
+            string Direccion = "";
+            string Numero = "";
+            string[] a = new string[] { CodAlumno, DNI, Nombre, Direccion, Numero };
+            cAlumno cAutenticacion = new cAlumno();
+
+            bool estadoResultante = false;
+            bool result;
+            try
+            {
+                cAutenticacion.Insertar(a);
+                result = false;
+            }
+            catch (Exception e)
+            {
+                result = true;
+            }
+
+            Assert.AreEqual(estadoResultante, result);
+
+        }
+        [TestMethod]
+        public void ValidarNullCodAlumnoOkDNIOkNombre_True()
+        {
+            string CodAlumno = "";
+            string DNI = "72712946";
+            string Nombre = "Fernando Calla";
+            string Direccion = "";
+            string Numero = "";
+            string[] a = new string[] { CodAlumno, DNI, Nombre, Direccion, Numero };
+            cAlumno cAutenticacion = new cAlumno();
+
+            bool estadoResultante = false;
+            bool result;
+            try
+            {
+                cAutenticacion.Insertar(a);
+                result = false;
+            }
+            catch (Exception e)
+            {
+                result = true;
+            }
+
+            Assert.AreEqual(estadoResultante, result);
+
+        }
+        [TestMethod]
+        public void ValidarOkCodAlumnoNullDNINullNombre_True()
+        {
+            string CodAlumno = "A0004";
+            string DNI = "";
+            string Nombre = "";
+            string Direccion = "";
+            string Numero = "";
+            string[] a = new string[] { CodAlumno, DNI, Nombre, Direccion, Numero };
+            cAlumno cAutenticacion = new cAlumno();
+
+            bool estadoResultante = false;
+            bool result;
+            try
+            {
+                cAutenticacion.Insertar(a);
+                result = false;
+            }
+            catch (Exception e)
+            {
+                result = true;
+            }
+
+            Assert.AreEqual(estadoResultante, result);
+
+        }
+        [TestMethod]
+        public void ValidarNullCodAlumnoOkDNINullNombre_True()
+        {
+            string CodAlumno = "";
+            string DNI = "72712946";
+            string Nombre = "";
+            string Direccion = "";
+            string Numero = "";
+            string[] a = new string[] { CodAlumno, DNI, Nombre, Direccion, Numero };
+            cAlumno cAutenticacion = new cAlumno();
+
+            bool estadoResultante = false;
+            bool result;
+            try
+            {
+                cAutenticacion.Insertar(a);
+                result = false;
+            }
+            catch (Exception e)
+            {
+                result = true;
+            }
+            Assert.AreEqual(estadoResultante, result);
+
+        }
+        [TestMethod]
+        public void ValidarNullCodAlumnoNullDNIOkNombre_True()
+        {
+            string CodAlumno = "";
+            string DNI = "";
+            string Nombre = "Fernando Calla";
+            string Direccion = "";
+            string Numero = "";
+            string[] a = new string[] { CodAlumno, DNI, Nombre, Direccion, Numero };
+            cAlumno cAutenticacion = new cAlumno();
+
+            bool estadoResultante = false;
+            bool result;
+            try
+            {
+                cAutenticacion.Insertar(a);
+                result = false;
+            }
+            catch (Exception e)
+            {
+                result = true;
+            }
+
+            Assert.AreEqual(estadoResultante, result);
+
+        }
+        [TestMethod]
+        public void ValidarNullCodAlumnoNullDNINullNombre_True()
+        {
+            string CodAlumno = "";
+            string DNI = "";
+            string Nombre = "";
+            string Direccion = "";
+            string Numero = "";
+            string[] a = new string[] { CodAlumno, DNI, Nombre, Direccion, Numero };
+            cAlumno cAutenticacion = new cAlumno();
+
+            bool estadoResultante = false;
+            bool result;
+            try
+            {
+                cAutenticacion.Insertar(a);
+                result = false;
+            }
+            catch (Exception e)
+            {
+                result = true;
+            }
+
+            Assert.AreEqual(estadoResultante, result);
+
+        }
+        [TestMethod]
+        public void ValidarOKExisteCodAlumnoOkDNIOkNombre_True()
+        {
+            string CodAlumno = "A0001";
+            string DNI = "72712346";
+            string Nombre = "Fernando Palca";
+            string Direccion = "";
+            string Numero = "";
+            string[] a = new string[] { CodAlumno, DNI, Nombre, Direccion, Numero };
+            cAlumno cAutenticacion = new cAlumno();
+
+            bool estadoResultante = false;
+            bool result;
+            try
+            {
+                cAutenticacion.Insertar(a);
+                result = false;
+            }
+            catch (Exception e)
+            {
+                result = true;
+            }
+
+            Assert.AreEqual(estadoResultante, result);
+
+        }
+        [TestMethod]
+        public void ValidarOKExisteCodAlumnoOkDNINullNombre_True()
+        {
+            string CodAlumno = "A0001";
+            string DNI = "72712346";
+            string Nombre = "";
+            string Direccion = "";
+            string Numero = "";
+            string[] a = new string[] { CodAlumno, DNI, Nombre, Direccion, Numero };
+            cAlumno cAutenticacion = new cAlumno();
+
+            bool estadoResultante = false;
+            bool result;
+            try
+            {
+                cAutenticacion.Insertar(a);
+                result = false;
+            }
+            catch (Exception e)
+            {
+                result = true;
+            }
+
+            Assert.AreEqual(estadoResultante, result);
+
+        }
+        [TestMethod]
+        public void ValidarOKExisteCodAlumnoNullDNIOkNombre_True()
+        {
+            string CodAlumno = "A0001";
+            string DNI = "";
+            string Nombre = "Fernando Palca";
+            string Direccion = "";
+            string Numero = "";
+            string[] a = new string[] { CodAlumno, DNI, Nombre, Direccion, Numero };
+            cAlumno cAutenticacion = new cAlumno();
+
+            bool estadoResultante = false;
+            bool result;
+            try
+            {
+                cAutenticacion.Insertar(a);
+                result = false;
+            }
+            catch (Exception e)
+            {
+                result = true;
+            }
+
+            Assert.AreEqual(estadoResultante, result);
+
+        }
+        [TestMethod]
+        public void ValidarOKExisteCodAlumnoNullDNINullNombre_True()
+        {
+            string CodAlumno = "A0001";
+            string DNI = "";
+            string Nombre = "";
+            string Direccion = "";
+            string Numero = "";
+            string[] a = new string[] { CodAlumno, DNI, Nombre, Direccion, Numero };
+            cAlumno cAutenticacion = new cAlumno();
+
+            bool estadoResultante = false;
+            bool result;
+            try
+            {
+                cAutenticacion.Insertar(a);
+                result = false;
+            }
+            catch (Exception e)
+            {
+                result = true;
+            }
+
+            Assert.AreEqual(estadoResultante, result);
+
+        }
     }
 }
