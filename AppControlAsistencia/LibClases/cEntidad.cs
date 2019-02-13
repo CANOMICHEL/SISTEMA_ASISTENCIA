@@ -109,22 +109,6 @@ namespace LibClases
         //------------------- Actualizar registros -----------------------
         public virtual void Actualizar(params string[] Atributos)
         {
-            /*
-            //-- Permite actualizar informacion de un registro en la tabla
-
-            //-- Recuperar los valores de los atributos
-            aValores = Atributos;
-            //-- Formar la cadena de actualizacion
-            string CadenaActualizar = "update " + aNombreTabla + " set";
-            for (int k = 1; k < aValores.Length; k++)
-            {
-                if (k == aValores.Length - 1)
-                    CadenaActualizar += aNombres[k] + "= '" + aValores[k] + "' ";
-                else
-                    CadenaActualizar += aNombres[k] + "= '" + aValores[k] + "',";
-            }
-            CadenaActualizar += "where "+ aNombres[0]+ "= '"+ aValores[0] + "'";
-            */
             //-- Permite actualizar informacion de un registro en la tabla
 
             //-- Recuperar los valores de los atributos

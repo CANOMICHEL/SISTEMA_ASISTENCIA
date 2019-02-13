@@ -21,6 +21,12 @@ namespace AppControlAsistencia
         {
             frmAsistencia frm = new frmAsistencia();
             frm.Show();
+            Console.WriteLine();
+        }
+
+        private void panel1_Paint(object sender, PaintEventArgs e)
+        {
+
         }
     }
 }

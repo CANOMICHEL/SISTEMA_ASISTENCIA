@@ -30,11 +30,11 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmControlUsuario));
             this.panel = new System.Windows.Forms.Panel();
+            this.txtPassword = new System.Windows.Forms.TextBox();
+            this.txtUsername = new System.Windows.Forms.TextBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.tbPassword = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.tbUser = new System.Windows.Forms.TextBox();
             this.lblUser = new System.Windows.Forms.Label();
             this.btnAcceder = new System.Windows.Forms.Button();
             this.panel.SuspendLayout();
@@ -46,8 +46,8 @@
             // 
             this.panel.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("panel.BackgroundImage")));
             this.panel.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.panel.Controls.Add(this.tbPassword);
-            this.panel.Controls.Add(this.tbUser);
+            this.panel.Controls.Add(this.txtPassword);
+            this.panel.Controls.Add(this.txtUsername);
             this.panel.Controls.Add(this.pictureBox1);
             this.panel.Controls.Add(this.pictureBox2);
             this.panel.Controls.Add(this.label1);
@@ -58,6 +58,34 @@
             this.panel.Name = "panel";
             this.panel.Size = new System.Drawing.Size(729, 420);
             this.panel.TabIndex = 0;
+            // 
+            // txtPassword
+            // 
+            this.txtPassword.BackColor = System.Drawing.Color.LightSteelBlue;
+            this.txtPassword.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtPassword.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtPassword.ForeColor = System.Drawing.SystemColors.GrayText;
+            this.txtPassword.Location = new System.Drawing.Point(41, 241);
+            this.txtPassword.Name = "txtPassword";
+            this.txtPassword.Size = new System.Drawing.Size(380, 22);
+            this.txtPassword.TabIndex = 12;
+            this.txtPassword.Text = "Contraseña";
+            this.txtPassword.Enter += new System.EventHandler(this.enter_event);
+            this.txtPassword.Leave += new System.EventHandler(this.leave_event);
+            // 
+            // txtUsername
+            // 
+            this.txtUsername.BackColor = System.Drawing.Color.LightSteelBlue;
+            this.txtUsername.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtUsername.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtUsername.ForeColor = System.Drawing.SystemColors.GrayText;
+            this.txtUsername.Location = new System.Drawing.Point(41, 153);
+            this.txtUsername.Name = "txtUsername";
+            this.txtUsername.Size = new System.Drawing.Size(380, 22);
+            this.txtUsername.TabIndex = 10;
+            this.txtUsername.Text = "Usuario";
+            this.txtUsername.Enter += new System.EventHandler(this.enter_event);
+            this.txtUsername.Leave += new System.EventHandler(this.leave_event);
             // 
             // pictureBox1
             // 
@@ -77,20 +105,6 @@
             this.pictureBox2.TabIndex = 13;
             this.pictureBox2.TabStop = false;
             // 
-            // tbPassword
-            // 
-            this.tbPassword.BackColor = System.Drawing.Color.LightSteelBlue;
-            this.tbPassword.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.tbPassword.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tbPassword.ForeColor = System.Drawing.SystemColors.GrayText;
-            this.tbPassword.Location = new System.Drawing.Point(41, 241);
-            this.tbPassword.Name = "tbPassword";
-            this.tbPassword.Size = new System.Drawing.Size(380, 22);
-            this.tbPassword.TabIndex = 12;
-            this.tbPassword.Text = "Contraseña";
-            this.tbPassword.Enter += new System.EventHandler(this.enter_event);
-            this.tbPassword.Leave += new System.EventHandler(this.leave_event);
-            // 
             // label1
             // 
             this.label1.AutoSize = true;
@@ -101,20 +115,6 @@
             this.label1.Size = new System.Drawing.Size(380, 24);
             this.label1.TabIndex = 11;
             this.label1.Text = "_____________________________________";
-            // 
-            // tbUser
-            // 
-            this.tbUser.BackColor = System.Drawing.Color.LightSteelBlue;
-            this.tbUser.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.tbUser.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tbUser.ForeColor = System.Drawing.SystemColors.GrayText;
-            this.tbUser.Location = new System.Drawing.Point(41, 153);
-            this.tbUser.Name = "tbUser";
-            this.tbUser.Size = new System.Drawing.Size(380, 22);
-            this.tbUser.TabIndex = 10;
-            this.tbUser.Text = "Usuario";
-            this.tbUser.Enter += new System.EventHandler(this.enter_event);
-            this.tbUser.Leave += new System.EventHandler(this.leave_event);
             // 
             // lblUser
             // 
@@ -161,9 +161,9 @@
         private System.Windows.Forms.Panel panel;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.PictureBox pictureBox2;
-        private System.Windows.Forms.TextBox tbPassword;
+        private System.Windows.Forms.TextBox txtPassword;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox tbUser;
+        private System.Windows.Forms.TextBox txtUsername;
         private System.Windows.Forms.Label lblUser;
         private System.Windows.Forms.Button btnAcceder;
 

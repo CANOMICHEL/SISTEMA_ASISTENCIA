@@ -45,7 +45,6 @@ create table TDocente
 	Nombre varchar (50) not null,
 	Direccion varchar (50),
 	Telefono varchar (10),
-	TipoDocente varchar(20) not null,
 
 	-- definicion de la clave foranea
 	primary key (CodDocente),
@@ -134,8 +133,10 @@ insert into TAlumno values('A0003','10229388','Jaimazo','Urb. Por allí','275891'
 --insert into TTipoDocente values('SE','Docente Secundaria')
 
 --============================================= DOCENTE ====================================================
-insert into TDocente values('D001','1234','24943726','El profesor de Jaimito','Urb. Michi','984758836','PRIMARIA')
-insert into TDocente values('D002','1234','48495867','El profesor Jirafales','Av. Andinoncio','944203953','SECUNDARIA')
+insert into TDocente values('DP001','1234','24943726','El profesor de Jaimito','Urb. Michi','984758836')
+insert into TDocente values('DS002','1234','48495867','El profesor Jirafales','Av. Andinoncio','944203953')
+insert into TDocente values('DI001','1234','68495867','Rubencito','Av. AKLSD','944203944')
+insert into TDocente values('AU001','1234','47495867','Karelia','Av. Cultura','944203933')
 
 --============================================= GRADO ====================================================
 insert into TGrado values('G01','1','A','P')

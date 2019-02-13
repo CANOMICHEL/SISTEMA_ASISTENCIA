@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace LibClases
 {
-    class cDocente : cEntidad
+    public class cDocente : cEntidad
     {
         //------------ ATRIBUTOS -------------
         //-- Se heredan de cEntidad
@@ -19,7 +19,19 @@ namespace LibClases
         //---- Implementacion de metodos abstractos
         public override string[] NombresAtributos()
         {
-            return new string[] { "CodDocente", "Contraseña", "DNI", "Nombre", "Direccion", "Telefono","TipoDocente" };
+            return new string[] { "CodDocente", "Contraseña", "DNI", "Nombre", "Direccion", "Telefono" };
+        }
+
+        public Boolean RespuestaLogin(string pUsuario, string pContraseña)
+        {
+            string Consulta = "exec spuTDocente_Validar '"+pUsuario+"' ,'"+pContraseña+"'";
+            Console.WriteLine(Consulta);
+
+            aConexion.EjecutarSelect(Consulta);
+            if (aConexion.Datos.Tables[0].Rows[0][0].ToString() == "0")
+                return true;
+            else
+                return false;
         }
     }
 }

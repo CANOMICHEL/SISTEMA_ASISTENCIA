@@ -78,6 +78,12 @@
       <DependentUpon>frmIngresoDatos.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\LibClases\LibClases.csproj">
+      <Project>{6d5b3432-0a5e-4646-8665-55d505ff2dfe}</Project>
+      <Name>LibClases</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

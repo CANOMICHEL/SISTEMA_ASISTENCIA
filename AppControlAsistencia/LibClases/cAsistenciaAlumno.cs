@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace LibClases
 {
-    class cAsistenciaAlumno : cEntidad
+    public class cAsistenciaAlumno : cEntidad
     {
         //------------ ATRIBUTOS -------------
         //-- Se heredan de cEntidad

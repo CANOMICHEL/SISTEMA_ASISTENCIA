@@ -108,8 +108,7 @@ create procedure spuTDocente_Insertar
 	@DNI varchar (8),
 	@Nombre varchar (20), 
 	@Direccion varchar (50),
-	@Telefono varchar (10),
-	@CodTipoDocente varchar(8)
+	@Telefono varchar (10)
 as
 begin
 	-- Validacion del codigo
@@ -126,7 +125,7 @@ begin
 				begin
 					-- Insertar nuevo cliente
 					insert into TDocente
-					values(@CodDocente,@Contraseña,@DNI,@Nombre,@Direccion,@Telefono,@CodTipoDocente)
+					values(@CodDocente,@Contraseña,@DNI,@Nombre,@Direccion,@Telefono)
 					-- COnfirmacion operacion
 					select CodError = 0, Mensaje = 'Registro insertado exitosamente'
 				end
@@ -155,8 +154,7 @@ create procedure spuTDocente_Actualizar
 	@DNI varchar (8),
 	@Nombre varchar (20), 
 	@Direccion varchar (50),
-	@Telefono varchar (10),
-	@TipoDocente varchar(8)
+	@Telefono varchar (10)
 as
 begin
 	-- Validacion del codigo
@@ -176,8 +174,7 @@ begin
 						Nombre = @Nombre,
 						Direccion = @Direccion,
 						Telefono = @Telefono,
-						DNI = @DNI,
-						TipoDocente = @TipoDocente
+						DNI = @DNI
 						where CodDocente = @CodDocente
 					-- Confirmacion operacion
 					select CodError = 0, Mensaje = 'Registro insertado exitosamente'
