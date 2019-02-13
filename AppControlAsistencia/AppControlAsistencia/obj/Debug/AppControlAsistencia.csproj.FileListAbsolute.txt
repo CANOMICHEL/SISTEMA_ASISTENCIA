@@ -67,5 +67,3 @@ C:\Users\Admin\SISTEMA_ASISTENCIA\AppControlAsistencia\AppControlAsistencia\obj\
 C:\Users\Admin\SISTEMA_ASISTENCIA\AppControlAsistencia\AppControlAsistencia\obj\Debug\AppControlAsistencia.FrmPrincipal.resources
 C:\Users\Admin\SISTEMA_ASISTENCIA\AppControlAsistencia\AppControlAsistencia\obj\Debug\AppControlAsistencia.Properties.Resources.resources
 C:\Users\Admin\SISTEMA_ASISTENCIA\AppControlAsistencia\AppControlAsistencia\obj\Debug\AppControlAsistencia.csproj.GenerateResource.Cache
-C:\Users\mcl\Desktop\SISTEMA_ASISTENCIA\AppControlAsistencia\AppControlAsistencia\bin\Debug\LibClases.dll
-C:\Users\mcl\Desktop\SISTEMA_ASISTENCIA\AppControlAsistencia\AppControlAsistencia\bin\Debug\LibClases.pdb

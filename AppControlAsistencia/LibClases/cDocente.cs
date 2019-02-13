@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using System.Data;
+
 namespace LibClases
 {
     public class cDocente : cEntidad
@@ -32,13 +32,6 @@ namespace LibClases
                 return true;
             else
                 return false;
-        }
-
-        public DataTable AulasDocente(string cod)
-        {
-            string consulta = "exec spuTMatricula_GradoPorDocente '" + cod + "'";
-            aConexion.EjecutarSelect(consulta);
-            return aConexion.Datos.Tables[0];
         }
     }
 }
