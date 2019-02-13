@@ -7,7 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-
+using LibFormularios;
 namespace AppControlAsistencia
 {
     public partial class FrmPrincipal : Form
@@ -15,6 +15,12 @@ namespace AppControlAsistencia
         public FrmPrincipal()
         {
             InitializeComponent();
+        }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+            frmAsistencia frm = new frmAsistencia();
+            frm.Show();
         }
     }
 }

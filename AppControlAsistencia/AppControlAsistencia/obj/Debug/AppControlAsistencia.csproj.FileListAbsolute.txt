@@ -3,13 +3,13 @@ C:\Users\mcl\Desktop\SISTEMA_ASISTENCIA\AppControlAsistencia\AppControlAsistenci
 C:\Users\mcl\Desktop\SISTEMA_ASISTENCIA\AppControlAsistencia\AppControlAsistencia\bin\Debug\AppControlAsistencia.exe
 C:\Users\mcl\Desktop\SISTEMA_ASISTENCIA\AppControlAsistencia\AppControlAsistencia\bin\Debug\AppControlAsistencia.pdb
 C:\Users\mcl\Desktop\SISTEMA_ASISTENCIA\AppControlAsistencia\AppControlAsistencia\obj\Debug\AppControlAsistencia.csprojResolveAssemblyReference.cache
-C:\Users\mcl\Desktop\SISTEMA_ASISTENCIA\AppControlAsistencia\AppControlAsistencia\obj\Debug\AppControlAsistencia.frmIngresoDatos.resources
 C:\Users\mcl\Desktop\SISTEMA_ASISTENCIA\AppControlAsistencia\AppControlAsistencia\obj\Debug\AppControlAsistencia.FrmPrincipal.resources
 C:\Users\mcl\Desktop\SISTEMA_ASISTENCIA\AppControlAsistencia\AppControlAsistencia\obj\Debug\AppControlAsistencia.Properties.Resources.resources
 C:\Users\mcl\Desktop\SISTEMA_ASISTENCIA\AppControlAsistencia\AppControlAsistencia\obj\Debug\AppControlAsistencia.csproj.GenerateResource.Cache
 C:\Users\mcl\Desktop\SISTEMA_ASISTENCIA\AppControlAsistencia\AppControlAsistencia\obj\Debug\AppControlAsistencia.exe
 C:\Users\mcl\Desktop\SISTEMA_ASISTENCIA\AppControlAsistencia\AppControlAsistencia\obj\Debug\AppControlAsistencia.pdb
-C:\Users\mcl\Desktop\SISTEMA_ASISTENCIA\AppControlAsistencia\AppControlAsistencia\obj\Debug\AppControlAsistencia.frmControlUsuario.resources
 C:\Users\Admin\SISTEMA_ASISTENCIA\AppControlAsistencia\AppControlAsistencia\bin\Debug\AppControlAsistencia.exe.config
 C:\Users\Admin\SISTEMA_ASISTENCIA\AppControlAsistencia\AppControlAsistencia\obj\Debug\AppControlAsistencia.exe
 C:\Users\Admin\SISTEMA_ASISTENCIA\AppControlAsistencia\AppControlAsistencia\obj\Debug\AppControlAsistencia.pdb
+C:\Users\mcl\Desktop\SISTEMA_ASISTENCIA\AppControlAsistencia\AppControlAsistencia\bin\Debug\LibFormularios.dll
+C:\Users\mcl\Desktop\SISTEMA_ASISTENCIA\AppControlAsistencia\AppControlAsistencia\bin\Debug\LibFormularios.pdb

@@ -16,7 +16,7 @@ namespace AppControlAsistencia
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new frmControlUsuario());
+            Application.Run(new FrmPrincipal());
         }
     }
 }

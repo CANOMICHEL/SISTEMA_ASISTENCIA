@@ -41,6 +41,24 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="frmAsistencia.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmAsistencia.Designer.cs">
+      <DependentUpon>frmAsistencia.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmControlUsuario.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmControlUsuario.Designer.cs">
+      <DependentUpon>frmControlUsuario.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmIngresoDatos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmIngresoDatos.designer.cs">
+      <DependentUpon>frmIngresoDatos.cs</DependentUpon>
+    </Compile>
     <Compile Include="FrmPadre.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -48,6 +66,17 @@
       <DependentUpon>FrmPadre.cs</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="frmAsistencia.resx">
+      <DependentUpon>frmAsistencia.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmControlUsuario.resx">
+      <DependentUpon>frmControlUsuario.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmIngresoDatos.resx">
+      <DependentUpon>frmIngresoDatos.cs</DependentUpon>
+    </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

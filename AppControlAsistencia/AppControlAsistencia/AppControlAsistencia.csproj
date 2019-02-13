@@ -44,18 +44,6 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="frmControlUsuario.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="frmControlUsuario.Designer.cs">
-      <DependentUpon>frmControlUsuario.cs</DependentUpon>
-    </Compile>
-    <Compile Include="frmIngresoDatos.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="frmIngresoDatos.Designer.cs">
-      <DependentUpon>frmIngresoDatos.cs</DependentUpon>
-    </Compile>
     <Compile Include="FrmPrincipal.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -64,12 +52,6 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="frmControlUsuario.resx">
-      <DependentUpon>frmControlUsuario.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="frmIngresoDatos.resx">
-      <DependentUpon>frmIngresoDatos.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="FrmPrincipal.resx">
       <DependentUpon>FrmPrincipal.cs</DependentUpon>
     </EmbeddedResource>
@@ -94,6 +76,12 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\LibFormularios\LibFormularios.csproj">
+      <Project>{b3231f80-807f-495d-a457-dcac6976cb0d}</Project>
+      <Name>LibFormularios</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
