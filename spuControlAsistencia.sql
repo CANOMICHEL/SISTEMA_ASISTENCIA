@@ -41,6 +41,7 @@ begin
 end
 go
 
+--=======================================================================================
 -- SPU Actualizar Alumno
 if exists (select * from dbo.sysobjects where name = 'spuTAlumno_Actualizar')
 	drop procedure spuTAlumno_Actualizar
@@ -82,7 +83,7 @@ begin
 		select CodError = 1, Mensaje = 'El código del alumno no existe en la base de datos'
 end
 go
-
+--=======================================================================================
 -- SPU Listar Alumnos
 if exists (select * from dbo.sysobjects where name = 'spuTAlumno_Listar')
 	drop procedure spuTAlumno_Listar
@@ -143,6 +144,7 @@ begin
 end
 go
 
+--=======================================================================================
 -- SPU Actualizar Docente
 if exists (select * from dbo.sysobjects where name = 'spuTDocente_Actualizar')
 	drop procedure spuTDocente_Actualizar
@@ -194,6 +196,7 @@ begin
 end
 go
 
+--=======================================================================================
 -- SPU Listar Docentes
 if exists (select * from dbo.sysobjects where name = 'spuTDocente_Listar')
 	drop procedure spuTDocente_Listar
@@ -204,6 +207,27 @@ begin
 	select * from TDocente
 end
 go
+
+--=======================================================================================
+-- SPU Validar Docente
+if exists (select * from dbo.sysobjects where name = 'spuTDocente_Validar')
+	drop procedure spuTDocente_Validar
+go
+create procedure spuTDocente_Validar
+	@CodDocente varchar (8),
+	@Contraseña varchar(20)
+	
+as
+begin
+	if (exists (select * from TDocente where CodDocente = @CodDocente and Contraseña = @Contraseña))
+	begin
+		select CodError = 0, Mensaje = 'Existe usuario en la BD'
+	end
+	else
+		select CodError = 1, Mensaje = 'No existe usuario en la BD'	
+end
+go
+
 
 
 --======================================================================================
@@ -257,7 +281,7 @@ begin
 end
 go
 
-
+--=======================================================================================
 -- SPU Actualizar Grado
 if exists (select * from dbo.sysobjects where name = 'spuTGrado_Actualizar')
 	drop procedure spuTGrado_Actualizar
@@ -303,6 +327,7 @@ begin
 end
 go
 
+--=======================================================================================
 -- SPU Listar Grados
 if exists (select * from dbo.sysobjects where name = 'spuTGrado_Listar')
 	drop procedure spuTGrado_Listar
@@ -361,6 +386,7 @@ begin
 end
 go
 
+--=======================================================================================
 -- SPU Actualizar Matricula
 if exists (select * from dbo.sysobjects where name = 'spuTMatricula_Actualizar')
 	drop procedure spuTMatricula_Actualizar
@@ -409,7 +435,7 @@ end
 go
 
 
-
+--=======================================================================================
 -- SPU Listar Matricula
 if exists (select * from dbo.sysobjects where name = 'spuTMatricula_Listar')
 	drop procedure spuTMatricula_Listar
@@ -421,12 +447,41 @@ begin
 end
 go
 
+--=======================================================================================
+-- SPU Listar Grado por Docente
+if exists (select * from dbo.sysobjects where name = 'spuTMatricula_GradoPorDocente')
+	drop procedure spuTMatricula_GradoPorDocente
+go
+create procedure spuTMatricula_GradoPorDocente
+	@CodDocente varchar(8)
+as
+begin
+	select  distinct TM.CodGrado,Grado,Seccion
+		from TMatricula TM INNER JOIN TGrado TG on TM.CodGrado = TG.CodGrado
+		where CodDocente = @CodDocente
+end
+go
+
+--=======================================================================================
+-- SPU Listar Grado por Docente
+if exists (select * from dbo.sysobjects where name = 'spuTMatricula_AlumnosPorGrado')
+	drop procedure spuTMatricula_AlumnosPorGrado
+go
+create procedure spuTMatricula_AlumnosPorGrado
+	@CodGrado varchar(8)
+as
+begin
+	select  TA.CodAlumno,Nombre
+		from TMatricula TM INNER JOIN TAlumno TA on TM.CodAlumno = TA.CodAlumno
+		where CodGrado = @CodGrado
+		order by Nombre
+end
+go
 
 
-
---======================================================================================
+--============================================================================================
 --================================ TASISTENCIAALUMNO =========================================
---======================================================================================
+--============================================================================================
 -- SPU Insertar Asistencia
 if exists (select * from dbo.sysobjects where name = 'spuTAsistenciaAlumno_Insertar')
 	drop procedure spuTAsistenciaAlumno_Insertar
@@ -472,76 +527,66 @@ begin
 		select CodError = 1, Mensaje = 'La fecha se encuentra en blanco o ya existe asistencia de alumno'
 end
 go
-/*
--- SPU Actualizar Matricula
-if exists (select * from dbo.sysobjects where name = 'spuTMatricula_Actualizar')
-	drop procedure spuTMatricula_Actualizar
+
+--=======================================================================================
+-- SPU Actualizar Asistencia
+if exists (select * from dbo.sysobjects where name = 'spuTAsistenciaAlumno_Actualizar')
+	drop procedure spuTAsistenciaAlumno_Actualizar
 go
-create procedure spuTMatricula_Actualizar
-	@AñoCurricular varchar(8),
+create procedure spuTAsistenciaAlumno_Actualizar
+	@Fecha DateTime,
 	@CodAlumno varchar(8),
-	@CodGrado varchar(8),
-	@Seccion varchar(20),
-	@Nivel varchar(8),
-	@CodDocente varchar(8)
+	@AñoCurricular varchar(8),
+	@Estado varchar(8),
+	@Observacion varchar (50)
 as
 begin
 	-- Validacion del año curricular
-	if (@AñoCurricular != '' and exists (select * from TMatricula where AñoCurricular = @AñoCurricular and CodAlumno = @CodAlumno))
+	if (@Fecha != '' and exists (select * from TAsistenciaAlumno where day(Fecha) = day(@Fecha) and 
+	month(Fecha) = month(@Fecha) and year(Fecha) = year(@Fecha) and CodAlumno = @CodAlumno))
 	begin
 		-- Validar CodAlumno
 		if (@CodAlumno != '')
 		begin
 			-- Validar el Nombre
-			if (@CodGrado != '')
+			if (@AñoCurricular != '')
 			begin
 				-- Validad el Seccion
-				if (@Seccion != '')
+				if (@Estado != '')
 				begin
-					if (@Nivel != '')
-					begin
-						if (@CodDocente != '')
-						begin
-							-- Insertar nuevo alumno
-							update TMatricula set 
-								CodGrado = @CodGrado,
-								Seccion = @Seccion,
-								Nivel = @Nivel,
-								CodDocente = @CodDocente
-								where AñoCurricular = @AñoCurricular and CodAlumno = @CodAlumno
+					-- Actualizar Asistencia de alumno
+							update TAsistenciaAlumno set 
+								AñoCurricular = @AñoCurricular,
+								Estado = @Estado,
+								Observacion = @Observacion
+
+								where Fecha = @Fecha and CodAlumno = @CodAlumno
 							-- Confirmacion operacion
 							select CodError = 0, Mensaje = 'Registro insertado exitosamente'
-						end
-						else
-							select CodError = 1, Mensaje = 'El codigo del docente no puede estar vacío'
-					end
-					else
-						select CodError = 1, Mensaje = 'El campo nivel no puede estar vacío'
+
 				end
 				else
-					select CodError = 1, Mensaje = 'El campo seccion no puede estar vacío'
+					select CodError = 1, Mensaje = 'El campo estado no puede estar vacío'
 			end
 			else
-				select CodError = 1, Mensaje = 'El campo grado no puede estar vacío'
+				select CodError = 1, Mensaje = 'El campo año curricular no puede estar vacío'
 		end
 		else
 			select CodError = 1, Mensaje = 'El codigo del alumno no puede estar vacío'
 	end
 	else
-		select CodError = 1, Mensaje = 'El año curricular se encuentra en blanco o no existe matrícula'
+		select CodError = 1, Mensaje = 'La fecha se encuentra en blanco o ya existe asistencia de alumno'
 end
 go
 
-
-
--- SPU Listar Matricula
-if exists (select * from dbo.sysobjects where name = 'spuTMatricula_Listar')
-	drop procedure spuTMatricula_Listar
+--=======================================================================================
+-- SPU Listar Asistencia
+if exists (select * from dbo.sysobjects where name = 'spuTAsistenciaAlumno_Listar')
+	drop procedure spuTAsistenciaAlumno_Listar
 go
-create procedure spuTMatricula_Listar
+create procedure spuTAsistenciaAlumno_Listar
 as
 begin
-	select * from TMatricula
+	select * from TAsistenciaAlumno
 end
 go
-*/

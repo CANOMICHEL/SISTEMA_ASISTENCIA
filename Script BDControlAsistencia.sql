@@ -129,20 +129,28 @@ go
 --============================================= ALUMNO ====================================================
 insert into TAlumno values('A0001','91758846','Jaimito','Av. Los chistes Cuadra 3','')
 insert into TAlumno values('A0002','34251217','Jaime','Av. Loritos Cuadra 1','')
+insert into TAlumno values('A0003','10229388','Jaimazo','Urb. Por allí','275891')
 --=========================================== TIPO DOCENTE ====================================================
 --insert into TTipoDocente values('SE','Docente Secundaria')
 
 --============================================= DOCENTE ====================================================
-insert into TDocente values('D001','1234','24943726','El profesor de Jaimito','Urb. Michi','984758836','SE')
+insert into TDocente values('D001','1234','24943726','El profesor de Jaimito','Urb. Michi','984758836','PRIMARIA')
+insert into TDocente values('D002','1234','48495867','El profesor Jirafales','Av. Andinoncio','944203953','SECUNDARIA')
 
 --============================================= GRADO ====================================================
 insert into TGrado values('G01','1','A','P')
+insert into TGrado values('G02','1','B','P')
+
+
+insert into TGrado values('G08','1','A','S')
 
 --============================================= MATRICULA ====================================================
 insert into TMatricula values('2016','A0001','G01','D001')
 insert into TMatricula values('2016','A0002','G01','D001')
+insert into TMatricula values('2016','A0003','G08','D002')
 
 --============================================= ASISTENCIA ====================================================
 insert into TAsistenciaAlumno values('01/10/2016','A0001','2016','P','El alumno se comportó mal')
-
+insert into TAsistenciaAlumno values('01/10/2016','A0002','2016','T','')
+insert into TAsistenciaAlumno values('01/10/2016','A0003','2016','F','Sus papás pidieron permiso')
 
