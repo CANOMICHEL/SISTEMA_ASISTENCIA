@@ -64,7 +64,7 @@ namespace AppControlAsistencia
             }
             else
             {
-                MessageBox.Show("Nope");
+                MessageBox.Show("Nope miserable");
             }
             //aqui se verificara que el usuario y contraseña sea válido
             //ademas se debe verificar que el usuario acceda al sistema correcto
