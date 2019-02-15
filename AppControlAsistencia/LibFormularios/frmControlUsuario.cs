@@ -21,6 +21,7 @@ namespace LibFormularios
         public frmControlUsuario()
         {
             InitializeComponent();
+            
         }
 
         private void enter_event(object sender, EventArgs e)
@@ -63,14 +64,18 @@ namespace LibFormularios
                 Console.WriteLine(txtUsername.Text[0].ToString() + txtUsername.Text[1]);
                 if (txtUsername.Text[0].ToString() + txtUsername.Text[1] == "DP")
                 {
-                    Console.WriteLine("Llego aqui");
                     frmAsistencia L = new frmAsistencia();
+                    L.CodDocente = this.txtUsername.Text;
+                    
+                    
                     L.ShowDialog();
                 }
                 if (txtUsername.Text[0].ToString() + txtUsername.Text[1] == "DS")
                 {
                     //Abrir formulario de docente secunadria
+                    
                     frmAsistencia L = new frmAsistencia();
+                    L.CodDocente = this.txtUsername.Text;
                     L.ShowDialog();
                 }
                 if (txtUsername.Text[0].ToString() + txtUsername.Text[1] == "DI")
@@ -91,12 +96,10 @@ namespace LibFormularios
             {
 
                 MessageBox.Show("Acceso Denegado");
-
-               
-
             }
             //aqui se verificara que el usuario y contraseña sea válido
             //ademas se debe verificar que el usuario acceda al sistema correcto
         }
+
     }
 }

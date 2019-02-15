@@ -453,12 +453,13 @@ create procedure spuTMatricula_GradoPorDocente
 	@CodDocente varchar(8)
 as
 begin
-	select  distinct TM.CodGrado,Grado,Seccion
+	select  distinct TM.CodGrado,Grado+' '+Seccion as GradoSeccion
 		from TMatricula TM INNER JOIN TGrado TG on TM.CodGrado = TG.CodGrado
 		where CodDocente = @CodDocente
 end
 go
 
+exec spuTMatricula_GradoPorDocente 'DP001'
 --=======================================================================================
 -- SPU Listar Grado por Docente
 if exists (select * from dbo.sysobjects where name = 'spuTMatricula_AlumnosPorGrado')
@@ -475,7 +476,7 @@ begin
 end
 go
 
-
+exec spuTMatricula_AlumnosPorGrado 'G01'
 --============================================================================================
 --================================ TASISTENCIAALUMNO =========================================
 --============================================================================================
@@ -587,3 +588,19 @@ begin
 	select * from TAsistenciaAlumno
 end
 go
+
+--=======================================================================================
+-- SPU Datos Docente
+if exists (select * from dbo.sysobjects where name = 'spuTDocente_Datos')
+	drop procedure spuTDocente_Datos
+go
+create procedure spuTDocente_Datos
+	@CodDocente varchar(8)
+as
+begin
+	select Nombre from TDocente
+	where TDocente.CodDocente=@CodDocente
+end
+go
+
+exec spuTDocente_Datos 'DP001'

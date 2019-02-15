@@ -16,6 +16,7 @@ C:\Users\Lenovo\Desktop\SISTEMA_ASISTENCIA\AppControlAsistencia\LibFormularios\o
 C:\Users\Lenovo\Desktop\SISTEMA_ASISTENCIA\AppControlAsistencia\LibFormularios\obj\Debug\LibFormularios.csproj.GenerateResource.Cache
 C:\Users\Lenovo\Desktop\SISTEMA_ASISTENCIA\AppControlAsistencia\LibFormularios\obj\Debug\LibFormularios.dll
 C:\Users\Lenovo\Desktop\SISTEMA_ASISTENCIA\AppControlAsistencia\LibFormularios\obj\Debug\LibFormularios.pdb
+<<<<<<< HEAD
 C:\Users\Lenovo\Desktop\SISTEMA_ASISTENCIA\AppControlAsistencia\LibFormularios\obj\Debug\LibFormularios.frmDirector.resources
 C:\Users\Lenovo\Desktop\SISTEMA_ASISTENCIA\AppControlAsistencia\LibFormularios\obj\Debug\LibFormularios.frmIngresoDatos.resources
 C:\Users\Lenovo\Desktop\SISTEMA_ASISTENCIA\AppControlAsistencia\LibFormularios\obj\Debug\LibFormularios.frmControlUsuario.resources
@@ -58,3 +59,9 @@ C:\Users\Admin\SISTEMA_ASISTENCIA\AppControlAsistencia\LibFormularios\bin\Debug\
 C:\Users\Admin\SISTEMA_ASISTENCIA\AppControlAsistencia\LibFormularios\bin\Debug\LibFormularios.pdb
 C:\Users\Admin\SISTEMA_ASISTENCIA\AppControlAsistencia\LibFormularios\bin\Debug\LibClases.dll
 C:\Users\Admin\SISTEMA_ASISTENCIA\AppControlAsistencia\LibFormularios\bin\Debug\LibClases.pdb
+C:\Users\mcl\Desktop\SISTEMA_ASISTENCIA\AppControlAsistencia\LibFormularios\obj\Debug\LibFormularios.frmControlUsuario.resources
+C:\Users\mcl\Desktop\SISTEMA_ASISTENCIA\AppControlAsistencia\LibFormularios\obj\Debug\LibFormularios.frmDirector.resources
+C:\Users\mcl\Desktop\SISTEMA_ASISTENCIA\AppControlAsistencia\LibFormularios\obj\Debug\LibFormularios.frmIngresoDatos.resources
+C:\Users\mcl\Desktop\SISTEMA_ASISTENCIA\AppControlAsistencia\LibFormularios\obj\Debug\LibFormularios.Properties.Resources.resources
+C:\Users\mcl\Desktop\SISTEMA_ASISTENCIA\AppControlAsistencia\LibFormularios\bin\Debug\LibClases.dll
+C:\Users\mcl\Desktop\SISTEMA_ASISTENCIA\AppControlAsistencia\LibFormularios\bin\Debug\LibClases.pdb
