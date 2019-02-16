@@ -41,6 +41,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="frmAlerta1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmAlerta1.Designer.cs">
+      <DependentUpon>frmAlerta1.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmAsistencia.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -85,6 +91,9 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="frmAlerta1.resx">
+      <DependentUpon>frmAlerta1.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmAsistencia.resx">
       <DependentUpon>frmAsistencia.cs</DependentUpon>
     </EmbeddedResource>

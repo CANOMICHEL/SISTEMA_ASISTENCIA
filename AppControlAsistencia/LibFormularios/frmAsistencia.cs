@@ -15,6 +15,9 @@ namespace LibFormularios
         cDocente aDocente = new cDocente();
         cAlumno aAlumno = new cAlumno();
         private string aCodDocente = "";
+
+        //Este atributo tiene la funcion de verificar que el docente haya guardado la lista de asistencia
+        private bool aGuardado = false;
         public frmAsistencia()
         {
             InitializeComponent();
@@ -30,12 +33,36 @@ namespace LibFormularios
 
         private void btnSalir_Click(object sender, EventArgs e)
         {
-            this.Close();
+            
+            if (aGuardado){
+                this.Close();
+                aGuardado = false;
+            }
+            else
+            {
+                frmAlerta1 alerta = new frmAlerta1();
+                alerta.Texto("Ud. No guardó el registro de asistencia. \n¿Desea Guardarlo?");
+                alerta.ShowDialog();
+                if (alerta.Guardar)
+                {
+                    btnGuardar_Click(sender, e);
+                    this.Close();
+                    aGuardado = false; 
+                }
+                
+            }
+                
         }
 
         private void btnGuardar_Click(object sender, EventArgs e)
         {
+            aGuardado = true;
+            MessageBox.Show("Registro guardado Satisfactoriamente");
+        }
 
+        private void cboGrado_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            CargarListaAlumnos();
         }
 
         #endregion eventos
@@ -96,10 +123,53 @@ namespace LibFormularios
             
         }
 
-        private void cboGrado_SelectedIndexChanged(object sender, EventArgs e)
+        private void dgvListadoAlumnos_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            CargarListaAlumnos();
+            var fila = dgvListadoAlumnos.CurrentRow;
+            //(sender as DataGridViewCheckBoxCell).TrueValue = true;
+            if (dgvListadoAlumnos.CurrentCell.ColumnIndex == 3)
+            {
+                (fila.Cells[3] as DataGridViewCheckBoxCell).Value = true;
+                (fila.Cells[4] as DataGridViewCheckBoxCell).Value = false;
+                (fila.Cells[5] as DataGridViewCheckBoxCell).Value = false;
+            }
+            if (dgvListadoAlumnos.CurrentCell.ColumnIndex == 4)
+            {
+                (fila.Cells[3] as DataGridViewCheckBoxCell).Value = false;
+                (fila.Cells[4] as DataGridViewCheckBoxCell).Value = true;
+                (fila.Cells[5] as DataGridViewCheckBoxCell).Value = false;
+            }
+            if (dgvListadoAlumnos.CurrentCell.ColumnIndex == 5)
+            {
+                (fila.Cells[3] as DataGridViewCheckBoxCell).Value = false;
+                (fila.Cells[4] as DataGridViewCheckBoxCell).Value = false;
+                (fila.Cells[5] as DataGridViewCheckBoxCell).Value = true;
+            }
         }
+
+        private void frmAsistencia_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            if (aGuardado)
+            {
+                this.Close();
+                aGuardado = false;
+            }
+            else
+            {
+                frmAlerta1 alerta = new frmAlerta1();
+                alerta.Texto("Ud. No guardó el registro de asistencia. \n¿Desea Guardarlo?");
+                alerta.ShowDialog();
+                if (alerta.Guardar)
+                {
+                    btnGuardar_Click(sender, e);
+                    this.Close();
+                    aGuardado = false;
+                }
+
+            }
+        }
+
+
 
 
     }

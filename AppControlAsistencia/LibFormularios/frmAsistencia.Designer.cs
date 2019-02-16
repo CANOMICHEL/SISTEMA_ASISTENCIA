@@ -32,19 +32,8 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.tabControl_Docente = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
-            this.panel2 = new System.Windows.Forms.Panel();
-            this.dgvListadoAlumnos = new System.Windows.Forms.DataGridView();
-            this.panel3 = new System.Windows.Forms.Panel();
-            this.btnSalir = new System.Windows.Forms.Button();
-            this.label3 = new System.Windows.Forms.Label();
-            this.btnGuardar = new System.Windows.Forms.Button();
-            this.cboGrado = new System.Windows.Forms.ComboBox();
-            this.tbDocente = new System.Windows.Forms.TextBox();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
-            this.lblTitulo = new System.Windows.Forms.Label();
-            this.tabPage2 = new System.Windows.Forms.TabPage();
             this.panel4 = new System.Windows.Forms.Panel();
+            this.dgvListadoAlumnos = new System.Windows.Forms.DataGridView();
             this.colunmNro = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ColumnCod = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ColumnNombres = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -52,14 +41,25 @@
             this.ColumnTarde = new System.Windows.Forms.DataGridViewCheckBoxColumn();
             this.ColumnFalta = new System.Windows.Forms.DataGridViewCheckBoxColumn();
             this.ColumnOBS = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.btnSalir = new System.Windows.Forms.Button();
+            this.btnGuardar = new System.Windows.Forms.Button();
+            this.panel3 = new System.Windows.Forms.Panel();
+            this.label3 = new System.Windows.Forms.Label();
+            this.cboGrado = new System.Windows.Forms.ComboBox();
+            this.tbDocente = new System.Windows.Forms.TextBox();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
+            this.lblTitulo = new System.Windows.Forms.Label();
+            this.tabPage2 = new System.Windows.Forms.TabPage();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.panel1.SuspendLayout();
             this.tabControl_Docente.SuspendLayout();
             this.tabPage1.SuspendLayout();
-            this.panel2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvListadoAlumnos)).BeginInit();
-            this.panel3.SuspendLayout();
             this.panel4.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvListadoAlumnos)).BeginInit();
+            this.panel2.SuspendLayout();
+            this.panel3.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
@@ -96,17 +96,14 @@
             this.tabPage1.Text = "Asistencia";
             this.tabPage1.UseVisualStyleBackColor = true;
             // 
-            // panel2
+            // panel4
             // 
-            this.panel2.BackColor = System.Drawing.SystemColors.ControlLightLight;
-            this.panel2.Controls.Add(this.btnSalir);
-            this.panel2.Controls.Add(this.btnGuardar);
-            this.panel2.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.panel2.Location = new System.Drawing.Point(3, 632);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(1312, 65);
-            this.panel2.TabIndex = 4;
+            this.panel4.Controls.Add(this.dgvListadoAlumnos);
+            this.panel4.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel4.Location = new System.Drawing.Point(3, 174);
+            this.panel4.Name = "panel4";
+            this.panel4.Size = new System.Drawing.Size(1312, 458);
+            this.panel4.TabIndex = 6;
             // 
             // dgvListadoAlumnos
             // 
@@ -127,6 +124,83 @@
             this.dgvListadoAlumnos.Name = "dgvListadoAlumnos";
             this.dgvListadoAlumnos.Size = new System.Drawing.Size(1312, 458);
             this.dgvListadoAlumnos.TabIndex = 3;
+            this.dgvListadoAlumnos.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvListadoAlumnos_CellClick);
+            // 
+            // colunmNro
+            // 
+            this.colunmNro.HeaderText = "Nro";
+            this.colunmNro.Name = "colunmNro";
+            this.colunmNro.Width = 70;
+            // 
+            // ColumnCod
+            // 
+            this.ColumnCod.HeaderText = "Cod";
+            this.ColumnCod.Name = "ColumnCod";
+            // 
+            // ColumnNombres
+            // 
+            this.ColumnNombres.HeaderText = "Apellidos y nombres";
+            this.ColumnNombres.Name = "ColumnNombres";
+            this.ColumnNombres.Width = 500;
+            // 
+            // Columnpresente
+            // 
+            this.Columnpresente.HeaderText = "Presente";
+            this.Columnpresente.Name = "Columnpresente";
+            // 
+            // ColumnTarde
+            // 
+            this.ColumnTarde.HeaderText = "Tarde";
+            this.ColumnTarde.Name = "ColumnTarde";
+            // 
+            // ColumnFalta
+            // 
+            this.ColumnFalta.HeaderText = "Falta";
+            this.ColumnFalta.Name = "ColumnFalta";
+            // 
+            // ColumnOBS
+            // 
+            this.ColumnOBS.HeaderText = "Observaciones";
+            this.ColumnOBS.Name = "ColumnOBS";
+            this.ColumnOBS.Width = 250;
+            // 
+            // panel2
+            // 
+            this.panel2.BackColor = System.Drawing.SystemColors.ControlLightLight;
+            this.panel2.Controls.Add(this.btnSalir);
+            this.panel2.Controls.Add(this.btnGuardar);
+            this.panel2.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.panel2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.panel2.Location = new System.Drawing.Point(3, 632);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(1312, 65);
+            this.panel2.TabIndex = 4;
+            // 
+            // btnSalir
+            // 
+            this.btnSalir.AutoSize = true;
+            this.btnSalir.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSalir.ForeColor = System.Drawing.Color.Firebrick;
+            this.btnSalir.Location = new System.Drawing.Point(1197, 11);
+            this.btnSalir.Name = "btnSalir";
+            this.btnSalir.Size = new System.Drawing.Size(95, 34);
+            this.btnSalir.TabIndex = 1;
+            this.btnSalir.Text = "Salir";
+            this.btnSalir.UseVisualStyleBackColor = true;
+            this.btnSalir.Click += new System.EventHandler(this.btnSalir_Click);
+            // 
+            // btnGuardar
+            // 
+            this.btnGuardar.AutoSize = true;
+            this.btnGuardar.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnGuardar.ForeColor = System.Drawing.SystemColors.HotTrack;
+            this.btnGuardar.Location = new System.Drawing.Point(20, 11);
+            this.btnGuardar.Name = "btnGuardar";
+            this.btnGuardar.Size = new System.Drawing.Size(95, 34);
+            this.btnGuardar.TabIndex = 0;
+            this.btnGuardar.Text = "Guardar";
+            this.btnGuardar.UseVisualStyleBackColor = true;
+            this.btnGuardar.Click += new System.EventHandler(this.btnGuardar_Click);
             // 
             // panel3
             // 
@@ -144,19 +218,6 @@
             this.panel3.Size = new System.Drawing.Size(1312, 171);
             this.panel3.TabIndex = 5;
             // 
-            // btnSalir
-            // 
-            this.btnSalir.AutoSize = true;
-            this.btnSalir.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSalir.ForeColor = System.Drawing.Color.Red;
-            this.btnSalir.Location = new System.Drawing.Point(1163, 11);
-            this.btnSalir.Name = "btnSalir";
-            this.btnSalir.Size = new System.Drawing.Size(95, 34);
-            this.btnSalir.TabIndex = 1;
-            this.btnSalir.Text = "Salir";
-            this.btnSalir.UseVisualStyleBackColor = true;
-            this.btnSalir.Click += new System.EventHandler(this.btnSalir_Click);
-            // 
             // label3
             // 
             this.label3.AutoSize = true;
@@ -166,19 +227,6 @@
             this.label3.Size = new System.Drawing.Size(218, 24);
             this.label3.TabIndex = 61;
             this.label3.Text = "LISTADO DE ALUMNOS";
-            // 
-            // btnGuardar
-            // 
-            this.btnGuardar.AutoSize = true;
-            this.btnGuardar.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnGuardar.ForeColor = System.Drawing.SystemColors.HotTrack;
-            this.btnGuardar.Location = new System.Drawing.Point(20, 11);
-            this.btnGuardar.Name = "btnGuardar";
-            this.btnGuardar.Size = new System.Drawing.Size(95, 34);
-            this.btnGuardar.TabIndex = 0;
-            this.btnGuardar.Text = "Guardar";
-            this.btnGuardar.UseVisualStyleBackColor = true;
-            this.btnGuardar.Click += new System.EventHandler(this.btnGuardar_Click);
             // 
             // cboGrado
             // 
@@ -238,53 +286,6 @@
             this.tabPage2.Text = "Reportes";
             this.tabPage2.UseVisualStyleBackColor = true;
             // 
-            // panel4
-            // 
-            this.panel4.Controls.Add(this.dgvListadoAlumnos);
-            this.panel4.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel4.Location = new System.Drawing.Point(3, 174);
-            this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(1312, 458);
-            this.panel4.TabIndex = 6;
-            // 
-            // colunmNro
-            // 
-            this.colunmNro.HeaderText = "Nro";
-            this.colunmNro.Name = "colunmNro";
-            this.colunmNro.Width = 70;
-            // 
-            // ColumnCod
-            // 
-            this.ColumnCod.HeaderText = "Cod";
-            this.ColumnCod.Name = "ColumnCod";
-            // 
-            // ColumnNombres
-            // 
-            this.ColumnNombres.HeaderText = "Apellidos y nombres";
-            this.ColumnNombres.Name = "ColumnNombres";
-            this.ColumnNombres.Width = 500;
-            // 
-            // Columnpresente
-            // 
-            this.Columnpresente.HeaderText = "Presente";
-            this.Columnpresente.Name = "Columnpresente";
-            // 
-            // ColumnTarde
-            // 
-            this.ColumnTarde.HeaderText = "Tarde";
-            this.ColumnTarde.Name = "ColumnTarde";
-            // 
-            // ColumnFalta
-            // 
-            this.ColumnFalta.HeaderText = "Falta";
-            this.ColumnFalta.Name = "ColumnFalta";
-            // 
-            // ColumnOBS
-            // 
-            this.ColumnOBS.HeaderText = "Observaciones";
-            this.ColumnOBS.Name = "ColumnOBS";
-            this.ColumnOBS.Width = 250;
-            // 
             // timer1
             // 
             this.timer1.Enabled = true;
@@ -299,16 +300,17 @@
             this.Name = "frmAsistencia";
             this.Text = "frmAsistencia";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.frmAsistencia_FormClosing);
             this.Load += new System.EventHandler(this.frmAsistencia_Load);
             this.panel1.ResumeLayout(false);
             this.tabControl_Docente.ResumeLayout(false);
             this.tabPage1.ResumeLayout(false);
+            this.panel4.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dgvListadoAlumnos)).EndInit();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvListadoAlumnos)).EndInit();
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
-            this.panel4.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }

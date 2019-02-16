@@ -65,3 +65,4 @@ C:\Users\mcl\Desktop\SISTEMA_ASISTENCIA\AppControlAsistencia\LibFormularios\obj\
 C:\Users\mcl\Desktop\SISTEMA_ASISTENCIA\AppControlAsistencia\LibFormularios\obj\Debug\LibFormularios.Properties.Resources.resources
 C:\Users\mcl\Desktop\SISTEMA_ASISTENCIA\AppControlAsistencia\LibFormularios\bin\Debug\LibClases.dll
 C:\Users\mcl\Desktop\SISTEMA_ASISTENCIA\AppControlAsistencia\LibFormularios\bin\Debug\LibClases.pdb
+C:\Users\mcl\Desktop\SISTEMA_ASISTENCIA\AppControlAsistencia\LibFormularios\obj\Debug\LibFormularios.frmAlerta1.resources
