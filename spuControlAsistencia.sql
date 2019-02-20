@@ -225,7 +225,7 @@ begin
 end
 go
 
-exec spuTDocente_Validar 'DP091', '1234'
+--exec spuTDocente_Validar 'DP091', '1234'
 
 --======================================================================================
 --=================================== TGRADO ===========================================
@@ -459,7 +459,7 @@ begin
 end
 go
 
-exec spuTMatricula_GradoPorDocente 'DP001'
+--exec spuTMatricula_GradoPorDocente 'DP001'
 --=======================================================================================
 -- SPU Listar Grado por Docente
 if exists (select * from dbo.sysobjects where name = 'spuTMatricula_AlumnosPorGrado')
@@ -476,7 +476,7 @@ begin
 end
 go
 
-exec spuTMatricula_AlumnosPorGrado 'G01'
+--exec spuTMatricula_AlumnosPorGrado 'G01'
 --============================================================================================
 --================================ TASISTENCIAALUMNO =========================================
 --============================================================================================
@@ -603,4 +603,4 @@ begin
 end
 go
 
-exec spuTDocente_Datos 'DP001'
+--exec spuTDocente_Datos 'DP001'
