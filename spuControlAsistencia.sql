@@ -10,8 +10,8 @@ go
 create procedure spuTAlumno_Insertar
 	@CodAlumno varchar (8),
 	@DNI varchar (8),
-	@Nombre varchar (20), 
-	@Direccion varchar (50),
+	@Nombre varchar (100), 
+	@Direccion varchar (100),
 	@Telefono varchar (10)
 as
 begin
@@ -49,8 +49,8 @@ go
 create procedure spuTAlumno_Actualizar
 	@CodAlumno varchar (8),
 	@DNI varchar (8),
-	@Nombre varchar (20), 
-	@Direccion varchar (50),
+	@Nombre varchar (100), 
+	@Direccion varchar (100),
 	@Telefono varchar (10)
 as
 begin
@@ -106,8 +106,8 @@ create procedure spuTDocente_Insertar
 	@CodDocente varchar (8),
 	@Contraseña varchar(20),
 	@DNI varchar (8),
-	@Nombre varchar (20), 
-	@Direccion varchar (50),
+	@Nombre varchar (100), 
+	@Direccion varchar (100),
 	@Telefono varchar (10)
 as
 begin
@@ -152,8 +152,8 @@ create procedure spuTDocente_Actualizar
 	@CodDocente varchar (8),
 	@Contraseña varchar(20),
 	@DNI varchar (8),
-	@Nombre varchar (20), 
-	@Direccion varchar (50),
+	@Nombre varchar (100), 
+	@Direccion varchar (100),
 	@Telefono varchar (10)
 as
 begin
